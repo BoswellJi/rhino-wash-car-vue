@@ -12,7 +12,6 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "prepare": "husky",
     "test": "vitest"
   },
   "dependencies": {
@@ -58,8 +57,5 @@
     "vite-svg-loader": "5.1.0",
     "vitest": "3.2.4",
     "vue-tsc": "3.1.1"
-  },
-  "lint-staged": {
-    "*": "eslint --fix"
   }
 }
