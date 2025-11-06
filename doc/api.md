@@ -21,10 +21,15 @@
 
 ### 响应参数：
 
-| 字段名 | 类型   | 说明       | 示例值                           |
-| ------ | ------ | ---------- | -------------------------------- |
-| img    | string | 验证码图片 | "/9j/4AAQSkZJRgABAQEASABIAAD..." |
-| uuid   | string | 唯一标识符 | "123e4567-e89b-12d3-a            |
+# 响应示例
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...",
+    "expire_at": "2023-12-01T11:10:00Z"
+  }
+}
 
 
 ## 接口名：/rhino-wash-api/getRouters
