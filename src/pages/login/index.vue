@@ -77,7 +77,7 @@ function createCode() {
   codeUrl.value = ""
   // 获取验证码图片
   getCaptchaApi().then((res) => {
-    codeUrl.value = res.data
+    codeUrl.value = `data:image/jpg;base64,${res.img}`
   })
 }
 
