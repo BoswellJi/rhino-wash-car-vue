@@ -59,14 +59,36 @@
 
 ### 请求方式： GET
 
-### 功能说明： 获取路由
+### 功能说明： 获取菜单路由
 
-### 请求参数：
+### 请求参数：Authorization token
 
 
 ### 响应参数：
 
 | 字段名 | 类型   | 说明       | 示例值                           |
 | ------ | ------ | ---------- | -------------------------------- |
-| img    | string | 验证码图片 | "/9j/4AAQSkZJRgABAQEASABIAAD..." |
-| uuid   | string | 唯一标识符 | "123e4567-e89b-12d3-a            |
+| msg    | string | 验证码图片 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+| data   | json   | 数据       | [{"name": "System"}]             |
+
+### 响应示例
+{
+    "msg": "操作成功",
+    "code": 200,
+    "data": [
+        {
+            "name": "System",
+            "path": "/system",
+            "hidden": false,
+            "redirect": "noRedirect",
+            "component": "Layout",
+            "alwaysShow": true,
+            "meta": {
+                "title": "系统管理",
+                "icon": "system",
+                "noCache": false,
+                "link": null
+            }
+       }]
+}
