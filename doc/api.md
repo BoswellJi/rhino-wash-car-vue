@@ -8,16 +8,6 @@
 
 ### 请求参数：
 
-| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
-| ----------- | ------ | ---- | ---------- | ---------------------- |
-| id          | number | 是   | 唯一标识符 | 1001                   |
-| name        | string | 是   | 名称       | "洗车服务"             |
-| type        | string | 是   | 类型       | "basic"                |
-| price       | number | 是   | 价格       | 99.99                  |
-| description | string | 否   | 描述信息   | "专业洗车服务"         |
-| status      | string | 是   | 状态       | "active"               |
-| created_at  | string | 是   | 创建时间   | "2023-12-01T10:00:00Z" |
-| updated_at  | string | 是   | 更新时间   | "2023-12-01T10:00:00Z" |
 
 ### 响应参数：
 | 字段名 | 类型   | 说明       | 示例值                           |
@@ -47,7 +37,7 @@
 | username    | string | 是   | 用户名     |  "admin"             |
 | password    | string | 是   | 密码       | "admin"              |
 | code        | string | 是   | 验证码     | "123"                |
-| uuid        | number | 是   | 唯一标识   | "b1a53c1"            |
+| uuid        | string | 是   | 唯一标识   | "b1a53c1"            |
 
 
 ## 响应参数：
