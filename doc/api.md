@@ -89,6 +89,7 @@
                 "icon": "system",
                 "noCache": false,
                 "link": null
-            }
-       }]
+                   }
+         }
+      ]
 }
