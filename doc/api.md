@@ -70,29 +70,29 @@
 | ------ | ------ | ---------- | -------------------------------- |
 | msg    | string | 验证码图片 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
-| data   | json   | 数据       | [{"name": "System"}]             |
+| data   | json   | 菜单数据       | [{"name": "System"}]         |
+| name   | string    | 路由名称       |System             |
+| path   | string    | URL 路径       |/system             |
+| hidden   | boolean    | 是否隐藏菜单       |false             |
+| redirect   | string   | 路由重定向       |noRedirect             |
+| component   | string  | 视图组件       |Layout             |
+| alwaysShow   | boolean| 是否总是显示根菜单       |true   |
+| meta   | Object| 元信息       |Object             |
+| meta.title   | string| 菜单标题       |系统管理             |
+| meta.icon   | string| 菜单图标       |system             |
+| meta.noCache   | boolean| 是否缓存页面       |false   |
+| meta.link   | string| 外部链接       |null|
+| children   | Array| 子菜单列表       |Array|
+| children.name   | string| 子路由的唯一名称       |User|
+| children.path   | string| 子路由的路径       |User|
+| children.hidden   | boolean| 是否在父菜单的下拉列表中隐藏此子菜单       |false|
+| children.component   | string| 子路由对应的页面组件路径       |system/role/index|
+| children.meta   | Object| 子菜单的元信息      |Object|
+| children.meta.title   | string| 子菜单的显示标题      |角色管理|
+| children.meta.icon   | string|子菜单的图标       |peoples             |
+| children.meta.noCache   | boolean| 是否缓存页面       |false   |
+| children.meta.link   | string| 外部链接       |null|
 
-### 响应示例
-{
-    "msg": "操作成功",
-    "code": 200,
-    "data": [
-        {
-            "name": "System",
-            "path": "/system",
-            "hidden": false,
-            "redirect": "noRedirect",
-            "component": "Layout",
-            "alwaysShow": true,
-            "meta": {
-                "title": "系统管理",
-                "icon": "system",
-                "noCache": false,
-                "link": null
-                   }
-         }
-     ]
-}
 
 ### 菜单效果图
 ![输入图片说明](../ScreenShot_2025-1.png)
