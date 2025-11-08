@@ -115,5 +115,17 @@
 | sysMerchants   | Object | 商家对象     | {}                     |
 | sysMerchants.id   | int | 商家id     | 1                     |
 | sysMerchants.merchantName   | String | 商家名称     | 小犀牛    |
-| sysMerchants.description   | String | 商家描述     | 打造自助洗车    |
+| sysMerchants.description   | String | 商家描述     | 打造自助洗车 |
+| sysMerchants.province   | String | 商家所属省份     | 江苏 |
+| sysMerchants.city   | String | 商家所属市     | 苏州 |
+| sysMerchants.district   | String | 商家所区     | 吴中区 |
+| sysMerchants.address   | String | 商家详细地址     |郭新东路108号 |
+| sysMerchants.bankName   | String | 商家银行     |中国银行 |
+| sysMerchants.bankNum   | String | 商家银行账号     |3202626512510236257 |
+| sysMerchants.totalRevenue   | decimal| 商家总收益     |100|
+| sysMerchants.withdraw_money   | decimal| 商家可提现     |100|
+| sysMerchants.servicePhone   | String | 商家客电话     |15998998000|
+| sysMerchants.createTime   | date| 创建时间     |2024-06-29T16:11:14.000+08:00|
+| sysMerchants.delFlag   | int| 删除标志：1正常0删除     |1|
+| sysMerchants.state   | int| 状态：1正常运营0停运     |1|
 
