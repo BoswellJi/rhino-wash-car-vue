@@ -112,7 +112,7 @@
 | ------ | ------ | ---------- | -------------------------------- |
 | msg    | string | 验证码图片 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
-| sysMerchants   | Object | 商家对象     | {}                     |
+| sysMerchants   | JSON | 商家对象     | {}                     |
 | sysMerchants.id   | int | 商家id     | 1                     |
 | sysMerchants.merchantName   | String | 商家名称     | 小犀牛    |
 | sysMerchants.description   | String | 商家描述     | 打造自助洗车 |
@@ -128,4 +128,36 @@
 | sysMerchants.createTime   | date| 创建时间     |2024-06-29T16:11:14.000+08:00|
 | sysMerchants.delFlag   | int| 删除标志：1正常0删除     |1|
 | sysMerchants.state   | int| 状态：1正常运营0停运     |1|
+|permissions   | array |用户权限     |*:*:*|
+|roles   | array |用户角色     |admin|
+|isDefaultModifyPwd   | boolean|检查初始密码是否提醒修改|false|
+|isPasswordExpired   | boolean|检查密码是否过期     |false|
+|user| JSON  |用户对象     |{}|
+|user.createBy| String |创建人     |admin|
+|user.createTime| date|创建时间     |2025-11-06 21:25:57|
+|user.updateBy| String |修改人     |null|
+|user.updateTime| date|修改时间     |null|
+|user.remark| String |备注     |备注信息|
+|user.userId| int |用户id     |1|
+|user.deptId| int |部门id     |101|
+|user.merchantId| int |商家id     |1|
+|user.userName| String |用户名     |admin|
+|user.nickName| String |昵称     |小犀牛|
+|user.email| String |邮箱     |ry@163.com|
+|user.phonenumber| String |手机号码     |15000000000|
+|user.sex| String|性别     |（0男 1女 2未知|
+|user.avatar| String|头像地址     |null|
+|user.password| String|密码     |null|
+|user.status| String|密码     |账号状态（1正常 0停用）|
+|user.delFlag| String|密码     |账号状态（1正常 0停用）|
+|user.loginIp| String|最后登录IP     |127.0.0.1|
+|user.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+
+
+
+
+
+
+
+
 
