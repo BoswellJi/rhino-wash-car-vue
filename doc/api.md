@@ -181,6 +181,17 @@
 |roles.roleKey| String|角色权限字符串|admin|
 |roles.roleSort| String|显示顺序|1|
 |roles.dataScope| String|数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限|1|
+|roles.menuCheckStrictly| int|菜单树选择项是否关联显示|false|
+|roles.deptCheckStrictly| int|部门树选择项是否关联显示|false|
+|roles.status| int |角色状态（1正常 0停用）|1|
+|roles.delFlag| int |删除标志（1代表存在 0代表删除）|1|
+|roles.flag| int |角色状态（1正常 0停用）|1|
+|roleIds| String |多个角色id|null|
+|postIds| String |多个岗位id|null|
+|roleId| int |岗位id|null|
+|admin| boolean|是否管理员|true|
+
+
 
 
 
