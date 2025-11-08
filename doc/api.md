@@ -133,10 +133,10 @@
 |isDefaultModifyPwd   | boolean|检查初始密码是否提醒修改|false|
 |isPasswordExpired   | boolean|检查密码是否过期     |false|
 |user| JSON  |用户对象     |{}|
-|user.createBy| String |创建人     |admin|
+|user.createBy| String |创建者     |admin|
 |user.createTime| date|创建时间     |2025-11-06 21:25:57|
-|user.updateBy| String |修改人     |null|
-|user.updateTime| date|修改时间     |null|
+|user.updateBy| String |修改者     |admin|
+|user.updateTime| date|修改时间     |2025-11-06 21:25:57|
 |user.remark| String |备注     |备注信息|
 |user.userId| int |用户id     |1|
 |user.deptId| int |部门id     |101|
@@ -152,6 +152,43 @@
 |user.delFlag| String|删除标志     |账号状态（1正常 0停用）|
 |user.loginIp| String|最后登录IP     |127.0.0.1|
 |user.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+|dept| JSON|部门对象    |{}|
+|dept.createBy| String|创建者    |admin|
+|dept.createTime| date|创建时间    |2025-11-06 21:25:57|
+|dept.updateBy| String|修改者   |admin|
+|dept.updateTime| date|修改时间   |2025-11-06 21:25:57|
+|dept.remark| String|备注   |null|
+|dept.deptId| int |部门id   |1|
+|dept.parentId| int |部门父级id   |1|
+|dept.ancestors| String|祖级列表   |1|
+|dept.deptName| String|部门名称   |深圳总公司|
+|dept.orderNum| int |显示顺序   |1|
+|dept.leader| String|负责人   |admin|
+|dept.phone| String|联系电话   |1800000000|
+|dept.email| String|邮箱   |123@qq.com|
+|dept.status| int |部门状态（1正常 0停用）|1|
+|dept.delFlag| int |删除标志（1代表存在 0代表删除）|1|
+|dept.parentName| String|父级名称|1|
+|dept.children| array|子级数据| [] |
+|roles| json|角色对象| {} |
+|roles.createBy| String|创建者| admin |
+|roles.createTime| date|创建时间| 2025-11-06 21:25:57|
+|roles.updateBy| String|修改者|admin |
+|roles.updateTime| date|修改时间| 2025-11-06 21:25:57|
+|roles.remark| String|备注|null |
+|roles.roleId| int |角色id|1|
+|roles.roleName| String|角色名称|超级管理员|
+|roles.roleKey| String|角色权限字符串|admin|
+|roles.roleSort| String|显示顺序|1|
+|roles.dataScope| String|数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限|1|
+
+
+
+
+
+
+
+
 
 
 
