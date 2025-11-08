@@ -5,20 +5,24 @@
    系统提示：500
    操作成功：200
 
-## 接口名：`/rhino-wash-api/captchaImage`
+## 1. 获取验证码
+ - 接口名：`/rhino-wash-api/captchaImage`
 
-- 请求方式： GET
+ - 请求方式： GET
 
-- 功能说明： 获取验证码图片
+ - 接口描述： 获取验证码图片
 
-- 请求参数：无
+ - 请求参数：无
 
 
-- 响应参数：
+### 1.1 响应参数：
 | 字段名 | 类型   | 说明       | 示例值                           |
 | ------ | ------ | ---------- | -------------------------------- |
 | img    | string | 验证码图片 | "/9j/4AAQSkZJRgABAQEASABIAAD..." |
+|captchaEnabled| boolean| 验证码启用 |true |
 | uuid   | string | 唯一标识符 | "123e4567-e89b-12d3-a            |
+
+
 
 
 ## 接口名：/rhino-wash-api/login
