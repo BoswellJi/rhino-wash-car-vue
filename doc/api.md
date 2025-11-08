@@ -48,13 +48,7 @@
 | code   | string | 唯一标识符 | 200                              |
 | token  | string | 唯一标识符 | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOi  |
 
-### 2.4 响应示例
-```json
-{
-    "msg": "操作成功",
-    "code": 200,
-    "token": "eyJhbGciOiJIUzUxMiJ9..."
-}
+
 
 ## 接口名：/rhino-wash-api/getRouters
 
