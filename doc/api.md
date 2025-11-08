@@ -30,7 +30,7 @@
 ## 3. 系统用户登录
 -  **接口名**:`/login`
 -  **请求方式**: POST
--  **Content-Type**: `application/json
+-  **Content-Type**: application/json
 -  **接口描述**: 用户通过账号+密码登录，获取访问Token
 
 #### 3.1 请求参数 (Body)
