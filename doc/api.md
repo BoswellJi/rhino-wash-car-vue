@@ -2,7 +2,7 @@
 
 ## 常用错误状态码
    token过期：401
-   系统提示： 500
+   系统提示：500
    操作成功：200
 
 ## 接口名：/rhino-wash-api/captchaImage
