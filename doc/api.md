@@ -1,5 +1,9 @@
 # API 接口文档
 
+## 常用错误状态码
+   token过期：401
+   系统提示： 500
+
 ## 接口名：/rhino-wash-api/captchaImage
 
 ### 请求方式： GET
