@@ -112,5 +112,8 @@
 | ------ | ------ | ---------- | -------------------------------- |
 | msg    | string | 验证码图片 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
-| sysMerchants   | string | 状态码     | 200                     |
+| sysMerchants   | Object | 商家对象     | {}                     |
+| sysMerchants.id   | int | 商家id     | 1                     |
+| sysMerchants.merchantName   | String | 商家名称     | 小犀牛    |
+| sysMerchants.description   | String | 商家描述     | 打造自助洗车    |
 
