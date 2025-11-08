@@ -49,15 +49,19 @@
 | token  | string | 唯一标识符 | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOi  |
 
 
+## 3. 获取菜单路由
+- 接口名：`/rhino-wash-api/getRouters`
 
-## 接口名：/rhino-wash-api/getRouters
+- 请求方式： GET
 
-### 请求方式： GET
+- 接口描述： 获取后台左侧菜单数据
 
-### 功能说明： 获取菜单路由
+### 3.1 请求参数：
+####请求头 
+| 参数名 | 类型   | 是否必填       | 示例值                           |
+| ------ | ------ | ---------- | -------------------------------- |
+| Authorization     | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
 
-### 请求参数：Authorization token
-![输入图片说明](../image.png)
 
 ### 响应参数：
 
