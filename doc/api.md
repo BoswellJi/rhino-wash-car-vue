@@ -15,15 +15,6 @@
 | img    | string | 验证码图片 | "/9j/4AAQSkZJRgABAQEASABIAAD..." |
 | uuid   | string | 唯一标识符 | "123e4567-e89b-12d3-a            |
 
-### 响应示例
-{
-    "msg": "操作成功",
-    "img": "/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkS...",
-    "code": 200,
-    "captchaEnabled": true,
-    "uuid": "b1a53c11eb084e25b822bd48a7492d76"
-}
-
 
 ## 接口名：/rhino-wash-api/login
 
