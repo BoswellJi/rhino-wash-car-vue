@@ -148,8 +148,8 @@
 |user.sex| String|性别     |（0男 1女 2未知|
 |user.avatar| String|头像地址     |null|
 |user.password| String|密码     |null|
-|user.status| String|密码     |账号状态（1正常 0停用）|
-|user.delFlag| String|密码     |账号状态（1正常 0停用）|
+|user.status| String|账号状态     |账号状态（1正常 0停用）|
+|user.delFlag| String|删除标志     |账号状态（1正常 0停用）|
 |user.loginIp| String|最后登录IP     |127.0.0.1|
 |user.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
 
