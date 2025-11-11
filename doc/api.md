@@ -266,7 +266,37 @@
 | data.children.disabled| boolean| 是否有效    |true|
 
 
+## 8. 新增系统用户
+- **接口名**：`/system/user`
+- **请求方式**： POST
+- **接口描述**： 新增系统用户
+- **请求参数**：
+#### 8.1 Headers 参数 
+| 参数名 | 类型   | 是否必填       | 示例值                           |
+| ------ | ------ | ---------- | -------------------------------- |
+| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
 
+#### 8.2 Body 参数 application/json
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| merchantId    | int| 是   | 商家id       |1              |
+| deptId    | int| 是   | 部门Id     |  1             |
+| nickName    | string | 是   |昵称      | "admin"              |
+| phonenumber | string | 是  | 手机号码     | "15998009809"                |
+| email  | string | 可选  | 邮箱   | "16798990909"            |
+| userName  | int | 是  | 用户名称  | "admin"）     |
+| password        | string | 是   | 用户密码   | "123456" |
+| sex   | string | 是   | 性别  |（0男 1女 2未知） |
+| status   | int| 是   | 用户状态  | 账号状态（1正常 0停用） |
+| postIds   | array| 是   | 岗位  | [1] |
+| roleIds   | array | 是   | 角色   | [] |
+| remark   | string | 可选   | 备注   | "" |
+
+#### 8.2 响应参数：
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
 
 
 
