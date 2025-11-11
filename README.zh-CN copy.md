@@ -4,17 +4,9 @@
 </div>
 
 
-## 简介
+## 简介 <a href="https://mp.weixin.qq.com/s/ccuzm4ZlHvN-1XBBN2lduQ"><img src="https://img.shields.io/badge/AI-VibeCoding-black"></a>
 
 V3 Admin Vite 是一个精心制作的后台管理系统模板，基于 Vue3、Vite、TypeScript、Element Plus 等主流技术，并且具备良好的 AI Vibe Coding 体验！
-
-## 项目预览图
-**用户管理列表示例图**：左侧菜单参考api接口/system/user/deptTree
-![preview](./src/common/assets/images/docs/userListView.png)
-**用户管理列表示例图** admin账号时，需要显示商家下拉列表，其他账号从用户信息获取商家id，无需下拉选择
-![preview](./src/common/assets/images/docs/userAdd.png)
-
-
 
 ## 通知
 
@@ -134,7 +126,25 @@ pnpm test
 
 </details>
 
+## 链接
 
+**在线预览**：[github-pages](https://un-pany.github.io/v3-admin-vite)
+
+**中文文档**：[链接](https://juejin.cn/post/7445151895121543209)
+
+**零基础教程**：[链接](https://juejin.cn/column/7207659644487139387)
+
+**移动端 H5**：[mobvue](https://github.com/un-pany/mobvue)
+
+**Electron 桌面版**：[v3-electron-vite](https://github.com/un-pany/v3-electron-vite)
+
+**国内仓库**：[gitee](https://gitee.com/un-pany/v3-admin-vite)
+
+**可有可无的群**：[查看进群方式](https://github.com/un-pany/v3-admin-vite/issues/191)
+
+**捐赠**：[请作者喝咖啡](https://github.com/un-pany/v3-admin-vite/issues/69)
+
+**发行版 & 更新日志**：[releases](https://github.com/un-pany/v3-admin-vite/releases)
 
 ## 特性
 
@@ -196,7 +206,21 @@ pnpm test
 
 ![preview](./src/common/assets/images/docs/preview.png)
 
+## 贡献者
 
+在此感谢所有的贡献者！
+
+<a href="https://github.com/un-pany/v3-admin-vite/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=un-pany/v3-admin-vite">
+</a>
+
+## 公众号
+
+新的尝试，欢迎关注
+
+<a href="https://mp.weixin.qq.com/s/artNHKubYNRBlsrxD7eXXA">
+  <img src="https://github.com/user-attachments/assets/529bac73-f9e3-4311-94d0-3db57216b771">
+</a>
 
 ## License
 
