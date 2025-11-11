@@ -192,12 +192,13 @@
 #### 6.1 Query Params 参数
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
+| merchantId    | int| 是   | 商家id       | 0是admin账户              |
 | pageNum    | string | 是   | 页码     |  "1"             |
 | pageSize    | string | 是   | 每页记录数       | "10"              |
 | userName    | string | 可选  | 用户名     | "admin"                |
 | phonenumber  | string | 可选  | 唯一标识   | "16798990909"            |
 | deptId        | string | 可选   | 唯一标识   | "1"            |
-| createTime   | string | 可选   | 创建时间范围   | "2020-01-01"            |
+| createTime   | string | 可选   | 创建时间范围   | "2020-01-01" |
 
 #### 6.2 Headers 参数 
 | 参数名 | 类型   | 是否必填       | 示例值                           |
