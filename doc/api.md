@@ -197,7 +197,7 @@
 | pageSize    | string | 是   | 每页记录数       | "10"              |
 | userName    | string | 可选  | 用户名     | "admin"                |
 | phonenumber  | string | 可选  | 唯一标识   | "16798990909"            |
-| deptId        | string | 可选   | 唯一标识   | "1"            |
+| deptId        | string | 可选   | 部门Id，从7. 获取部门树列表接口获取   | "1" |
 | createTime   | string | 可选   | 创建时间范围   | "2020-01-01" |
 
 #### 6.2 Headers 参数 
@@ -238,6 +238,34 @@
 | rows.merchant.merchantName| String|商家名称     |"小犀牛"|
 | rows.roles|array|角色数组     |[]|
 | rows.admin|bollean|是否是管理员     |true|
+
+## 7. 获取部门树列表
+- **接口名**：`/system/user/deptTree`
+- **请求方式**： GET
+- **接口描述**： 获取部门树列表
+- **请求参数**：
+
+#### 7.2 Headers 参数 
+| 参数名 | 类型   | 是否必填       | 示例值                           |
+| ------ | ------ | ---------- | -------------------------------- |
+| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+
+#### 7.3 响应参数：
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+| data   | array | 部门数据     | []                     |
+| data.id   | int| 部门id     | 1                    |
+| data.label| String | 部门名称     | 苏州公司    |
+| data.disabled| boolean| 是否有效    |true|
+| data.children| array|子部门  |[]|
+| data.children.id| int|子部门id  |1|
+| data.children.label| String|子部门名称  |市场部|
+| data.children.disabled| boolean| 是否有效    |true|
+
+
+
 
 
 
