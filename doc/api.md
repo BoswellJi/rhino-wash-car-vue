@@ -184,6 +184,60 @@
 |roleId| int |岗位id|null|
 |admin| boolean|是否管理员|true|
 
+## 6. 获取用户列表
+- **接口名**：`/system/user/list`
+- **请求方式**： GET
+- **接口描述**： 获取用户列表
+- **请求参数**：
+#### 6.1 Query Params 参数
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| pageNum    | string | 是   | 页码     |  "1"             |
+| pageSize    | string | 是   | 每页记录数       | "10"              |
+| userName    | string | 可选  | 用户名     | "admin"                |
+| phonenumber  | string | 可选  | 唯一标识   | "16798990909"            |
+| deptId        | string | 可选   | 唯一标识   | "1"            |
+| createTime   | string | 可选   | 创建时间范围   | "2020-01-01"            |
+
+#### 6.2 Headers 参数 
+| 参数名 | 类型   | 是否必填       | 示例值                           |
+| ------ | ------ | ---------- | -------------------------------- |
+| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+
+#### 6.3 响应参数：
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+| total   | int | 总数据     | 10                     |
+| rows   | array| 列表行数     | [{}]                     |
+| rows.createBy| String | 创建者     | 小犀牛    |
+| rows.createTime| date| 创建时间    |2025-11-06 21:25:57|
+| rowsremark| String |备注   |null|
+| rows.userId| int| 用户id     | 1    |
+| rows.deptId| int| 部门id     | 1    |
+| rows.merchantId| int| 商家     | 1    |
+| rows.userName| String | 用户名称     | 小犀牛    |
+| rows.nickNamey| String | 昵称     | 小犀牛    |
+| rows.email| String | 邮箱     | ry@163.com    |
+| rows.phonenumber| String | 手机     |16889009098    |
+| rows.sex|  String|性别     |（0男 1女 2未知|
+| rows.avatar| String|头像地址     |""|
+| rows.status| String|账号状态     |账号状态（1正常 0停用）|
+| rows.delFlag| String|删除标志     |账号状态（1正常 0停用）|
+| rows.loginIp| String|最后登录IP     |127.0.0.1|
+| rows.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+| rows.dept|  JSON |部门数据     |{}|
+| rows.dept.deptId|  int|部门id     |1|
+| rows.dept.deptName|  int|部门名称     |"深圳科技"|
+| rows.dept.leader|  int|部门领导     |"admin"|
+| rows.dept.children|  array|子部门     |[]|
+| rows.merchant| JSON |商家数据     |{}|
+| rows.merchant.id| int|商家id     |1|
+| rows.merchant.merchantName| String|商家名称     |"小犀牛"|
+| rows.roles|array|角色数组     |[]|
+| rows.admin|bollean|是否是管理员     |true|
+
 
 
 ## 接口通用状态码说明
