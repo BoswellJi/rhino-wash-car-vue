@@ -9,22 +9,25 @@
 V3 Admin Vite 是一个精心制作的后台管理系统模板，基于 Vue3、Vite、TypeScript、Element Plus 等主流技术，并且具备良好的 AI Vibe Coding 体验！
 
 ## 项目预览图
-**用户管理列表示例图**：列表效果左图，左侧部门菜单数据参考api接口/system/user/deptTree，部门菜单数据效果右图
+
+**用户管理列表示例图**：列表效果，左侧部门菜单数据参考api接口/system/user/deptTree
 
 <table>
     <tr>
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/detMenu.png"/></td>
         <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
-        <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/detMenu.png"/></td>
     </tr>
-
 </table>
 
 
 
-**用户管理列表示例图**： admin账号时，需要显示商家下拉列表，其他账号从用户信息获取商家id，无需下拉选择，如图1
+**用户管理添加修改例图**： admin账号时，需要显示商家下拉列表，其他账号从用户信息获取商家id，无需下拉选择
 
-**图1**
-![preview](./src/common/assets/images/docs/userAdd.png)
+<table>
+    <tr>
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userAdd.png"/></td>
+    </tr>
+</table>
 
 
 
