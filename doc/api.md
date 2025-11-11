@@ -196,7 +196,8 @@
 | pageNum    | string | 是   | 页码     |  "1"             |
 | pageSize    | string | 是   | 每页记录数       | "10"              |
 | userName    | string | 可选  | 用户名     | "admin"                |
-| phonenumber  | string | 可选  | 唯一标识   | "16798990909"            |
+| phonenumber  | string | 可选  | 手机号码   | "16798990909"            |
+| status  | int | 可选  | 用户状态  | 1            |
 | deptId        | string | 可选   | 部门Id，从7. 获取部门树列表接口获取   | "1" |
 | createTime   | string | 可选   | 创建时间范围   | "2020-01-01" |
 
