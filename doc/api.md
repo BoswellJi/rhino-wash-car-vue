@@ -305,7 +305,7 @@
 | ------ | ------ | ---------- | -------------------------------- |
 | Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
 
-#### 9.1.2 Body 参数 application/json
+#### 9.1.2 Path 参数
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
 | userId    | int| 可选   | 系统用户id       |1              |
@@ -377,15 +377,6 @@
 | posts.postCode| String|岗位编号|001|
 | posts.postName| String|岗位名称|技术开发|
 | posts.postSort| int|显示顺序|1|
-
-
-
-
-
-
-
-
-
 
 
 
