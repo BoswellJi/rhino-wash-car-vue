@@ -212,7 +212,7 @@
 | rows   | array| 列表行数     | [{}]                     |
 | rows.createBy| String | 创建者     | 小犀牛    |
 | rows.createTime| date| 创建时间    |2025-11-06 21:25:57|
-| rowsremark| String |备注   |null|
+| rows.remark| String |备注   |null|
 | rows.userId| int| 用户id     | 1    |
 | rows.deptId| int| 部门id     | 1    |
 | rows.merchantId| int| 商家     | 1    |
@@ -294,6 +294,102 @@
 | ------ | ------ | ---------- | -------------------------------- |
 | msg    | string | 响应值 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
+
+## 9. 根据用户编号获取详细信息
+- **接口名**：`/system/user/{userId}`
+- **请求方式**： GET
+- **接口描述**： 根据用户编号获取详细信息
+### 9.1 请求参数
+#### 9.1.1 Headers 参数 
+| 参数名 | 类型   | 是否必填       | 示例值                           |
+| ------ | ------ | ---------- | -------------------------------- |
+| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+
+#### 9.1.2 Body 参数 application/json
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| userId    | int| 可选   | 系统用户id       |1              |
+
+### 9.2返回响应
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+| roleIds   | array |角色数组     | [1]                     |
+| data   | json|个人信息数据     | {}                    |
+| data.createBy| String | 创建者     | 小犀牛    |
+| data.createTime| date| 创建时间    |2025-11-06 21:25:57|
+| data.remark| String |备注   |null|
+| data.userId| int| 用户id     | 1    |
+| data.deptId| int| 部门id     | 1    |
+| data.merchantId| int| 商家     | 1    |
+| data.userName| String | 用户名称     | 小犀牛    |
+| data.nickNamey| String | 昵称     | 小犀牛    |
+| data.email| String | 邮箱     | ry@163.com    |
+| data.phonenumber| String | 手机     |16889009098    |
+| data.sex|  String|性别     |（0男 1女 2未知|
+| data.avatar| String|头像地址     |""|
+| data.status| String|账号状态     |账号状态（1正常 0停用）|
+| data.delFlag| String|删除标志     |账号状态（1正常 0停用）|
+| data.loginIp| String|最后登录IP     |127.0.0.1|
+| data.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+| data.pwdUpdateDate| String|最后密码修改时间    |2025-11-08T13:10:46.000+08:00|
+| data.dept.deptId| int |部门id   |1|
+| data.dept.parentId| int |部门父级id   |1|
+| data.dept.ancestors| String|祖级列表   |1|
+| data.dept.deptName| String|部门名称   |深圳总公司|
+| data.dept.orderNum| int |显示顺序   |1|
+| data.dept.leader| String|负责人   |admin|
+| data.dept.status| int |部门状态（1正常 0停用）|1|
+| data.dept.children| array|子级数据| [] |
+| data.roles.roles| array|角色数据| [] |
+| data.roles.roleId| int |角色id|1|
+| data.roles.roleName| String|角色名称|超级管理员|
+| data.roles.roleKey| String|角色权限字符串|admin|
+| data.roles.roleSort| String|显示顺序|1|
+| data.roles.dataScope| String|数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限|1|
+| data.roles.menuCheckStrictly| int|菜单树选择项是否关联显示|false|
+| data.roles.deptCheckStrictly| int|部门树选择项是否关联显示|false|
+| data.roles.status| int |角色状态（1正常 0停用）|1|
+| data.roles.flag| int |角色状态（1正常 0停用）|1|
+| data.roles.admin| boolean |是否为管理员（true是 flase否）|true|
+| data.admin| boolean |是否为管理员（true是 flase否）|true|
+| postIds| array|岗位数据| [1] |
+| roles| array|角色数据| [] |
+| rows.createTime| date| 创建时间    |2025-11-06 21:25:57|
+| roles.remark| String|备注|null |
+| roles.roleId| int |角色id|1|
+| roles.roleName| String|角色名称|超级管理员|
+| roles.roleKey| String|角色权限字符串|admin|
+| oles.roleSort| String|显示顺序|1|
+| roles.dataScope| String|数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限|1|
+| roles.menuCheckStrictly| int|菜单树选择项是否关联显示|false|
+| roles.deptCheckStrictly| int|部门树选择项是否关联显示|false|
+| roles.status| int |角色状态（1正常 0停用）|1|
+| roles.admin| boolean |是否为管理员（true是 flase否）|true|
+| merchants| array|商家数据| [] |
+| merchants.id| int |商家id|1|
+| merchants.merchantName| String|商家名称|犀牛商家|
+| posts| array|岗位数据| [] |
+| posts.createBy| String|创建人| admin |
+| posts.createTime| date| 创建时间    |2025-11-06 21:25:57|
+| posts.postId| int|岗位id|1|
+| posts.postCode| String|岗位编号|001|
+| posts.postName| String|岗位名称|技术开发|
+| posts.postSort| int|显示顺序|1|
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
