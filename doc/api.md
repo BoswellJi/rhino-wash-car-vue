@@ -73,7 +73,7 @@
 
 # 菜单路由接口
 
-## 获取菜单路由
+## 获取菜单路由列表
 
 **接口名**：`/getRouters`
 
@@ -224,7 +224,7 @@
 
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
-| merchantId    | int| 是   | 商家id       | 0是管理员账户，非0是其他账户 |
+| merchantId    | int| 是   | 商家id       | 1，0是管理员 |
 | pageNum    | string | 是   | 页码     |  "1"             |
 | pageSize    | string | 是   | 每页记录数       | "10"              |
 | userName    | string | 可选  | 用户名     | "admin"                |
@@ -307,7 +307,7 @@
 
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
-| merchantId    | int| 是   | 商家id       | 0是管理员账户，非0是其他账户             |
+| merchantId    | int| 是   | 商家id       |1， 0是管理员 |
 | deptId    | int| 是   | 部门Id     |  1    |
 | nickName    | string | 是   |昵称      | "admin"              |
 | phonenumber | string | 是  | 手机号码     | "15998009809"                |
@@ -317,8 +317,33 @@
 | sex   | string | 是   | 性别  |（0男 1女 2未知） |
 | status   | int| 是   | 用户状态  | 账号状态（1正常 0停用） |
 | postIds   | array| 是   | 岗位  | [1] |
-| roleIds   | array | 是   | 角色   | [] |
+| roleIds   | array | 是   | 角色   | [2] |
 | remark   | string | 可选   | 备注   | "" |
+
+## 修改系统用户
+**接口名**：`/system/user`
+
+**请求方式**： PUT
+
+**请求数据类型**:`body application/json`
+
+**接口描述**：修改系统用户
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|userId    | int| 是   | 系统用户Id     |  2    |
+|merchantId    | int| 是   | 商家id       |1， 0是管理员|
+|deptId    | int| 是   | 部门Id     |  1    |
+|nickName    | string | 是   |昵称   | "admin"              |
+|phonenumber | string | 是  | 手机号码     | "15998009809"                |
+|email  | string | 可选  | 邮箱   | "16798990909"            |
+|sex   | string | 是   | 性别  |（0男 1女 2未知） |
+|status   | int| 是   | 用户状态  | 账号状态（1正常 0停用） |
+|postIds   | array| 是   | 岗位  | [1] |
+|roleIds   | array | 是   | 角色   | [2] |
+|remark   | string | 可选   | 备注   | "" |
 
 **响应参数**:
 
