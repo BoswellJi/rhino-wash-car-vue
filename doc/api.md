@@ -6,6 +6,13 @@
 
 **认证方式**: Bearer Token (JWT)
 
+** 统一Headers 参数 
+
+| 参数名 | 类型   | 是否必填       | 示例值                           |
+| ------ | ------ | ---------- | -------------------------------- |
+| Authorization     | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...|
+
+
 # 验证码接口
 
 ## 获取验证码
@@ -27,12 +34,19 @@
 
 
 # 登录接口
+
 ## 系统用户登录
+
 **接口名**:`/login`
+
 **请求方式**: POST
-**请求数据类型**:`Body application/json`
+
+**请求数据类型**:`body application/json`
+
 **接口描述**: 用户通过账号+密码登录，获取访问Token
+
 **请求参数**:
+
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
 | username    | string | 是   | 用户名     |  "admin"             |
@@ -48,17 +62,19 @@
 | code   | string | 唯一标识符 | 200                              |
 | token  | string | 唯一标识符 | eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOi  |
 
+# 菜单路由接口
 
-## 4. 获取菜单路由
-- **接口名**：`/getRouters`
-- **请求方式**： GET
-- **接口描述**： 获取后台左侧菜单数据
-### 4.1 请求参数
+## 获取菜单路由
 
-#### 4.1.1  Headers 参数 
-| 参数名 | 类型   | 是否必填       | 示例值                           |
-| ------ | ------ | ---------- | -------------------------------- |
-| Authorization     | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+**接口名**：`/getRouters`
+
+**请求方式**： GET
+
+**接口描述**： 获取后台左侧菜单数据
+
+**请求参数**:
+
+
 
 
 ### 4.2 返回响应：
