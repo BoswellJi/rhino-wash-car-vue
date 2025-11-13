@@ -71,6 +71,8 @@
 
 **请求方式**： GET
 
+**请求数据类型**:`body application/json`
+
 **接口描述**： 获取后台左侧菜单数据
 
 **请求参数**:
@@ -89,10 +91,10 @@
 |component   | string  | 视图组件       |Layout             |
 |alwaysShow   | boolean| 是否总是显示根菜单       |true   |
 |meta   | Object| 元信息       |Object             |
-|meta.title   | string| 菜单标题       |系统管理             |
-|meta.icon   | string| 菜单图标       |system             |
-|meta.noCache   | boolean| 是否缓存页面       |false   |
-|meta.link   | string| 外部链接       |null|
+|&emsp;&emsp;title   | string| 菜单标题       |系统管理             |
+|&emsp;&emsp;icon   | string| 菜单图标       |system             |
+|&emsp;&emsp;noCache   | boolean| 是否缓存页面       |false   |
+|&emsp;&emsp;link   | string| 外部链接       |null|
 |children   | Array| 子菜单列表       |Array|
 |&emsp;&emsp;name   | string| 子路由的唯一名称       |User|
 |&emsp;&emsp;path   | string| 子路由的路径       |User|
@@ -105,7 +107,9 @@
 |&emsp;&emsp;meta.link   | string| 外部链接       |null|
 
 
-# 用户信息接口
+# 用户接口
+
+## 获取用户信息
 
 **接口名**：`/getInfo`
 
@@ -200,15 +204,19 @@
 |roleId| int |岗位id|null|
 |admin| boolean|是否管理员|true|
 
-## 6. 获取用户列表
-- **接口名**：`/system/user/list`
-- **请求方式**： GET
-- **接口描述**： 获取用户列表
-### 6.1 请求参数
-#### 6.1.1 Query Params 参数
+## 获取用户列表
+
+**接口名**：`/system/user/list`
+
+**请求方式**： GET
+
+**接口描述**： 获取用户列表
+
+**请求参数**： Query Params
+
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
-| merchantId    | int| 是   | 商家id       | 0是admin账户              |
+| merchantId    | int| 是   | 商家id       | 0是管理员账户，非0是其他账户 |
 | pageNum    | string | 是   | 页码     |  "1"             |
 | pageSize    | string | 是   | 每页记录数       | "10"              |
 | userName    | string | 可选  | 用户名     | "admin"                |
@@ -217,86 +225,82 @@
 | deptId        | string | 可选   | 部门Id，从7. 获取部门树列表接口获取   | "1" |
 | createTime   | string | 可选   | 创建时间范围   | "2020-01-01" |
 
-#### 6.1.2 Headers 参数 
-| 参数名 | 类型   | 是否必填       | 示例值                           |
-| ------ | ------ | ---------- | -------------------------------- |
-| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+**响应参数**:
 
-### 6.2返回响应：
 | 字段名 | 类型   | 说明       | 示例值                            |
 | ------ | ------ | ---------- | -------------------------------- |
-| msg    | string | 响应值 | "操作成功"                        |
-| code   | string | 状态码     | 200                              |
-| total   | int | 总数据     | 10                     |
-| rows   | array| 列表行数     | [{}]                     |
-| rows.createBy| String | 创建者     | 小犀牛    |
-| rows.createTime| date| 创建时间    |2025-11-06 21:25:57|
-| rows.remark| String |备注   |null|
-| rows.userId| int| 用户id     | 1    |
-| rows.deptId| int| 部门id     | 1    |
-| rows.merchantId| int| 商家     | 1    |
-| rows.userName| String | 用户名称     | 小犀牛    |
-| rows.nickNamey| String | 昵称     | 小犀牛    |
-| rows.email| String | 邮箱     | ry@163.com    |
-| rows.phonenumber| String | 手机     |16889009098    |
-| rows.sex|  String|性别     |（0男 1女 2未知|
-| rows.avatar| String|头像地址     |""|
-| rows.status| String|账号状态     |账号状态（1正常 0停用）|
-| rows.delFlag| String|删除标志     |账号状态（1正常 0停用）|
-| rows.loginIp| String|最后登录IP     |127.0.0.1|
-| rows.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
-| rows.dept|  JSON |部门数据     |{}|
-| rows.dept.deptId|  int|部门id     |1|
-| rows.dept.deptName|  int|部门名称     |"深圳科技"|
-| rows.dept.leader|  int|部门领导     |"admin"|
-| rows.dept.children|  array|子部门     |[]|
-| rows.merchant| JSON |商家数据     |{}|
-| rows.merchant.id| int|商家id     |1|
-| rows.merchant.merchantName| String|商家名称     |"小犀牛"|
-| rows.roles|array|角色数组     |[]|
-| rows.admin|bollean|是否是管理员     |true|
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|total   | int | 总数据     | 10                     |
+|rows   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createBy| String | 创建者     | 小犀牛    |
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;remark| String |备注   |null|
+|&emsp;&emsp;userId| int| 用户id     | 1    |
+|&emsp;&emsp;deptId| int| 部门id     | 1    |
+|&emsp;&emsp;merchantId| int| 商家     | 1    |
+|&emsp;&emsp;userName| String | 用户名称     | 小犀牛    |
+|&emsp;&emsp;nickNamey| String | 昵称     | 小犀牛    |
+|&emsp;&emsp;email| String | 邮箱     | ry@163.com    |
+|&emsp;&emsp;phonenumber| String | 手机     |16889009098    |
+|&emsp;&emsp;sex|  String|性别     |（0男 1女 2未知|
+|&emsp;&emsp;avatar| String|头像地址     |""|
+|&emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |账号状态（1正常 0停用）|
+|&emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
+|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+|&emsp;&emsp;dept|  JSON |部门数据     |{}|
+|&emsp;&emsp;dept.deptId|  int|部门id     |1|
+|&emsp;&emsp;dept.deptName|  int|部门名称     |"深圳科技"|
+|&emsp;&emsp;dept.leader|  int|部门领导     |"admin"|
+|&emsp;&emsp;dept.children|  array|子部门     |[]|
+|&emsp;&emsp;merchant| JSON |商家数据     |{}|
+|&emsp;&emsp;merchant.id| int|商家id     |1|
+|&emsp;&emsp;merchant.merchantName| String|商家名称     |"小犀牛"|
+|&emsp;&emsp;roles|array|角色数组     |[]|
+|&emsp;&emsp;admin|bollean|是否是管理员     |true|
 
-## 7. 获取部门树列表
-- **接口名**：`/system/user/deptTree`
-- **请求方式**： GET
-- **接口描述**： 获取部门树列表
-### 7.1 请求参数
-#### 7.1.1 Headers 参数 
-| 参数名 | 类型   | 是否必填       | 示例值                           |
-| ------ | ------ | ---------- | -------------------------------- |
-| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+## 获取部门树列表
 
+**接口名**：`/system/user/deptTree`
 
-#### 7.1.2 返回响应：
+**请求方式**： GET
+
+**接口描述**： 获取部门树列表
+
+**请求参数**：
+
+**响应参数**:
+
 | 字段名 | 类型   | 说明       | 示例值                            |
 | ------ | ------ | ---------- | -------------------------------- |
-| msg    | string | 响应值 | "操作成功"                        |
-| code   | string | 状态码     | 200                              |
-| data   | array | 部门数据     | []                     |
-| data.id   | int| 部门id     | 1                    |
-| data.label| String | 部门名称     | 苏州公司    |
-| data.disabled| boolean| 是否有效    |true|
-| data.children| array|子部门  |[]|
-| data.children.id| int|子部门id  |1|
-| data.children.label| String|子部门名称  |市场部|
-| data.children.disabled| boolean| 是否有效    |true|
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | array | 部门数据     | []                     |
+|&emsp;&emsp;id   | int| 部门id     | 1                    |
+|&emsp;&emsp;label| String | 部门名称     | 苏州公司    |
+|&emsp;&emsp;disabled| boolean| 是否有效    |true|
+|&emsp;&emsp;children| array|子部门  |[]|
+|&emsp;&emsp;children.id| int|子部门id  |1|
+|&emsp;&emsp;children.label| String|子部门名称  |市场部|
+|&emsp;&emsp;children.disabled| boolean| 是否有效    |true|
 
 
-## 8. 新增系统用户
-- **接口名**：`/system/user`
-- **请求方式**： POST
-- **接口描述**： 新增系统用户
-### 8.1 请求参数
-#### 8.1.1 Headers 参数 
-| 参数名 | 类型   | 是否必填       | 示例值                           |
-| ------ | ------ | ---------- | -------------------------------- |
-| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
+## 新增系统用户
+**接口名**：`/system/user`
 
-#### 8.1.2 Body 参数 application/json
+**请求方式**： POST
+
+**请求数据类型**:`body application/json`
+
+**接口描述**： 新增系统用户
+
+**请求参数**
+
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
-| merchantId    | int| 是   | 商家id       |1              |
-| deptId    | int| 是   | 部门Id     |  1             |
+| merchantId    | int| 是   | 商家id       | 0是管理员账户，非0是其他账户             |
+| deptId    | int| 是   | 部门Id     |  1    |
 | nickName    | string | 是   |昵称      | "admin"              |
 | phonenumber | string | 是  | 手机号码     | "15998009809"                |
 | email  | string | 可选  | 邮箱   | "16798990909"            |
@@ -308,28 +312,32 @@
 | roleIds   | array | 是   | 角色   | [] |
 | remark   | string | 可选   | 备注   | "" |
 
-### 8.2返回响应
+**响应参数**:
+
 | 字段名 | 类型   | 说明       | 示例值                            |
 | ------ | ------ | ---------- | -------------------------------- |
 | msg    | string | 响应值 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
 
-## 9. 根据用户编号获取详细信息
-- **接口名**：`/system/user/{userId}`
-- **请求方式**： GET
-- **接口描述**： 根据用户编号获取详细信息
-### 9.1 请求参数
-#### 9.1.1 Headers 参数 
-| 参数名 | 类型   | 是否必填       | 示例值                           |
-| ------ | ------ | ---------- | -------------------------------- |
-| Authorization  | string | 是 | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...	 |
 
-#### 9.1.2 Path 参数
+## 根据用户编号获取详细信息
+
+**接口名**：`/system/user/{userId}`
+
+**请求方式**： GET
+
+**接口描述**： 根据用户编号获取详细信息
+
+**请求参数**:  Query Params
+
+
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
 | userId    | int| 可选   | 系统用户id       |1              |
 
-### 9.2返回响应
+
+**响应参数**:
+
 | 字段名 | 类型   | 说明       | 示例值                            |
 | ------ | ------ | ---------- | -------------------------------- |
 | msg    | string | 响应值 | "操作成功"                        |
