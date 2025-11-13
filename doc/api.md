@@ -255,7 +255,7 @@
 |&emsp;&emsp;sex|  String|性别     |（0男 1女 2未知|
 |&emsp;&emsp;avatar| String|头像地址     |""|
 |&emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
-|&emsp;&emsp;delFlag| String|删除标志     |账号状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
 |&emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
 |&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
 |&emsp;&emsp;dept|  JSON |部门数据     |{}|
@@ -543,32 +543,18 @@
 |code   | string | 状态码     | 200                              |
 |total   | int | 总数据     | 10                     |
 |rows   | array| 列表行数     | [{}]                     |
-|&emsp;&emsp;createBy| String | 创建者     | 小犀牛    |
 |&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
-|&emsp;&emsp;remark| String |备注   |null|
-|&emsp;&emsp;userId| int| 用户id     | 1    |
-|&emsp;&emsp;deptId| int| 部门id     | 1    |
-|&emsp;&emsp;merchantId| int| 商家     | 1    |
-|&emsp;&emsp;userName| String | 用户名称     | 小犀牛    |
-|&emsp;&emsp;nickNamey| String | 昵称     | 小犀牛    |
-|&emsp;&emsp;email| String | 邮箱     | ry@163.com    |
-|&emsp;&emsp;phonenumber| String | 手机     |16889009098    |
-|&emsp;&emsp;sex|  String|性别     |（0男 1女 2未知|
-|&emsp;&emsp;avatar| String|头像地址     |""|
-|&emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
-|&emsp;&emsp;delFlag| String|删除标志     |账号状态（1正常 0停用）|
-|&emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
-|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
-|&emsp;&emsp;dept|  JSON |部门数据     |{}|
-|&emsp;&emsp;dept.deptId|  int|部门id     |1|
-|&emsp;&emsp;dept.deptName|  int|部门名称     |"深圳科技"|
-|&emsp;&emsp;dept.leader|  int|部门领导     |"admin"|
-|&emsp;&emsp;dept.children|  array|子部门     |[]|
-|&emsp;&emsp;merchant| JSON |商家数据     |{}|
-|&emsp;&emsp;merchant.id| int|商家id     |1|
-|&emsp;&emsp;merchant.merchantName| String|商家名称     |"小犀牛"|
-|&emsp;&emsp;roles|array|角色数组     |[]|
-|&emsp;&emsp;admin|bollean|是否是管理员     |true|
+|&emsp;&emsp;remark| String |备注   |超级管理员|
+|&emsp;&emsp;roleId| int| 角色id     | 1    |
+|&emsp;&emsp;roleName| String | 角色名称     | 小犀牛    |
+|&emsp;&emsp;roleKey| String | 角色权限字符串     |common    |
+|&emsp;&emsp;roleSort| int |显示顺序     | 1    |
+|&emsp;&emsp;dataScope| int | 1     |数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限   |
+|&emsp;&emsp;menuCheckStrictly|  int|1     |（菜单树选择项是否关联显示|
+|&emsp;&emsp;deptCheckStrictly| int|1     |部门树选择项是否关联显示|
+|&emsp;&emsp;status| String|角色状态     |角色状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
+
 
 
 
