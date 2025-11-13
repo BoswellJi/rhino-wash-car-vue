@@ -1,17 +1,24 @@
 #  小犀牛自助洗车API 接口文档
 
 **文档版本**: v1.0
+
 **基础 URL**: `https://vavlepage.com/rhino-wash-api`
+
 **认证方式**: Bearer Token (JWT)
 
 # 验证码接口
 
 ## 获取验证码
 **接口名**：`/captchaImage`
+
 **请求方式**： GET
+
 **接口描述**：
+
 **请求参数**:
+
 **响应状态**:
+
 | 字段名 | 类型   | 说明       | 示例值                           |
 | ------ | ------ | ---------- | -------------------------------- |
 | img    | string | 验证码图片 | "/9j/4AAQSkZJRgABAQEASABIAAD..." |
