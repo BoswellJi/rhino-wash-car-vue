@@ -146,7 +146,7 @@
 |&emsp;&emsp;totalRevenue   | decimal| 商家总收益     |100|
 |&emsp;&emsp;withdraw_money   | decimal| 商家可提现     |100|
 |&emsp;&emsp;servicePhone   | String | 商家客电话     |15998998000|
-|&emsp;&emsp;createTime   | date| 创建时间     |2024-06-29T16:11:14.000+08:00|
+|&emsp;&emsp;createTime   | date| 创建时间     |2024-06-29|
 |&emsp;&emsp;delFlag   | int| 删除标志：1正常0删除     |1|
 |&emsp;&emsp;state   | int| 状态：1正常运营0停运     |1|
 |permissions   | array |用户权限     |*:*:*|
@@ -172,7 +172,7 @@
 |&emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
 |&emsp;&emsp;delFlag| String|删除标志     |账号状态（1正常 0停用）|
 |&emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
-|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08|
 |dept| JSON|部门对象    |{}|
 |&emsp;&emsp;createBy| String|创建者    |admin|
 |&emsp;&emsp;createTime| date|创建时间    |2025-11-06 21:25:57|
@@ -257,7 +257,7 @@
 |&emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
 |&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
 |&emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
-|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08|
 |&emsp;&emsp;dept|  JSON |部门数据     |{}|
 |&emsp;&emsp;dept.deptId|  int|部门id     |1|
 |&emsp;&emsp;dept.deptName|  int|部门名称     |"深圳科技"|
@@ -445,7 +445,7 @@
 | data.delFlag| String|删除标志     |账号状态（1正常 0停用）|
 | data.loginIp| String|最后登录IP     |127.0.0.1|
 | data.loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
-| data.pwdUpdateDate| String|最后密码修改时间    |2025-11-08T13:10:46.000+08:00|
+| data.pwdUpdateDate| String|最后密码修改时间    |2025-11-08|
 | data.dept.deptId| int |部门id   |1|
 | data.dept.parentId| int |部门父级id   |1|
 | data.dept.ancestors| String|祖级列表   |1|
