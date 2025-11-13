@@ -91,13 +91,13 @@
 | ------ | ------ | ---------- | -------------------------------- |
 |msg    | string | 验证码图片 | "操作成功"                        |
 |code   | string | 状态码     | 200                              |
-|data   | json   | 菜单数据       | [{"name": "System"}]         |
-|name   | string    | 路由名称       |System             |
-|path   | string    | URL 路径       |/system             |
-|hidden   | boolean    | 是否隐藏菜单       |false             |
-|redirect   | string   | 路由重定向       |noRedirect             |
-|component   | string  | 视图组件       |Layout             |
-|alwaysShow   | boolean| 是否总是显示根菜单       |true   |
+|data   | json   | 菜单数据       | {}         |
+|&emsp;&emsp;name   | string    | 路由名称       |System             |
+|&emsp;&emsp;path   | string    | URL 路径       |/system             |
+|&emsp;&emsp;hidden   | boolean    | 是否隐藏菜单       |false             |
+|&emsp;&emsp;redirect   | string   | 路由重定向       |noRedirect             |
+|&emsp;&emsp;component   | string  | 视图组件       |Layout             |
+|&emsp;&emsp;alwaysShow   | boolean| 是否总是显示根菜单       |true   |
 |meta   | Object| 元信息       |Object             |
 |&emsp;&emsp;title   | string| 菜单标题       |系统管理             |
 |&emsp;&emsp;icon   | string| 菜单图标       |system             |
