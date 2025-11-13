@@ -225,13 +225,14 @@
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
 | merchantId    | int| 是   | 商家id       | 1，0是管理员 |
-| pageNum    | string | 是   | 页码     |  "1"             |
-| pageSize    | string | 是   | 每页记录数       | "10"              |
-| userName    | string | 可选  | 用户名     | "admin"                |
-| phonenumber  | string | 可选  | 手机号码   | "16798990909"            |
+| pageNum    | int | 是   | 页码     |  "1"             |
+| pageSize    | int | 是   | 每页记录数       | "10"              |
+| userName    | string | 否  | 用户名     | "admin"                |
+| phonenumber  | string | 否  | 手机号码   | "16798990909"            |
 | status  | int | 可选  | 用户状态  | 账号状态（1正常 0停用）     |
-| deptId        | string | 可选   | 部门Id，从7. 获取部门树列表接口获取   | "1" |
-| createTime   | string | 可选   | 创建时间范围   | "2020-01-01" |
+| deptId        | string | 否   | 部门Id |
+| beginTime   | string | 否   | 创建时间范围   | "2020-01-01" |
+| endTime   | string | 否   | 创建时间范围   | "2020-01-01" |
 
 **响应参数**:
 
@@ -512,15 +513,62 @@
 |beginTime    |datetime| 否   | 创建时间      |2025-11-01|
 |endTime    |datetime| 否   | 创建时间      |2025-11-01|
 
+# 角色接口
 
+## 获取角色列表
 
+**接口名**：`/system/role/list`
+
+**请求方式**： GET
+
+**接口描述**： 获取用户列表
+
+**请求参数**： Query Params
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| pageNum    | int| 是   | 页码     |  "1"             |
+| pageSize    | int | 是   | 每页记录数       | "10"              |
+| roleName    | string | 否  | 角色名     | "admin"                |
+| roleKey  | string | 否 | 角色权限字符串   | "common"            |
+| status  | int | 否  | 角色状态  | 状态（1正常 0停用）     |
+| beginTime   | string | 否   | 创建时间范围   | "2020-01-01" |
+| endTime   | string | 否   | 创建时间范围   | "2020-01-01" |
 
 **响应参数**:
 
 | 字段名 | 类型   | 说明       | 示例值                            |
 | ------ | ------ | ---------- | -------------------------------- |
-| msg    | string | 响应值 | "操作成功"                        |
-| code   | string | 状态码     | 200                              |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|total   | int | 总数据     | 10                     |
+|rows   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createBy| String | 创建者     | 小犀牛    |
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;remark| String |备注   |null|
+|&emsp;&emsp;userId| int| 用户id     | 1    |
+|&emsp;&emsp;deptId| int| 部门id     | 1    |
+|&emsp;&emsp;merchantId| int| 商家     | 1    |
+|&emsp;&emsp;userName| String | 用户名称     | 小犀牛    |
+|&emsp;&emsp;nickNamey| String | 昵称     | 小犀牛    |
+|&emsp;&emsp;email| String | 邮箱     | ry@163.com    |
+|&emsp;&emsp;phonenumber| String | 手机     |16889009098    |
+|&emsp;&emsp;sex|  String|性别     |（0男 1女 2未知|
+|&emsp;&emsp;avatar| String|头像地址     |""|
+|&emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |账号状态（1正常 0停用）|
+|&emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
+|&emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+|&emsp;&emsp;dept|  JSON |部门数据     |{}|
+|&emsp;&emsp;dept.deptId|  int|部门id     |1|
+|&emsp;&emsp;dept.deptName|  int|部门名称     |"深圳科技"|
+|&emsp;&emsp;dept.leader|  int|部门领导     |"admin"|
+|&emsp;&emsp;dept.children|  array|子部门     |[]|
+|&emsp;&emsp;merchant| JSON |商家数据     |{}|
+|&emsp;&emsp;merchant.id| int|商家id     |1|
+|&emsp;&emsp;merchant.merchantName| String|商家名称     |"小犀牛"|
+|&emsp;&emsp;roles|array|角色数组     |[]|
+|&emsp;&emsp;admin|bollean|是否是管理员     |true|
 
 
 
