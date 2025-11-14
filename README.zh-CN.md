@@ -37,152 +37,33 @@
 ## 通知
 
 > [!IMPORTANT]
-> 欢迎体验全新的 5.0 版本，它是一次匠心之作！如果对你有帮助，欢迎点个 Star 支持一下。
+> 欢迎体验全新的 2.0 版本，它是一次匠心之作！。
 
 > [!WARNING]
-> 4.x 版本如果没有严重的 BUG 将不再维护！[点击切换到 4.x 分支](https://github.com/un-pany/v3-admin-vite/tree/4.x)
+> 4.x 版本如果没有严重的 BUG 将不再维护！
 
 > [!TIP]
-> 正式推出付费服务，如果不想自己动手，但想移除 TS 或其他模块？试试懒人套餐！[点击看看](https://github.com/un-pany/v3-admin-vite/issues/225)
+> 正式推出付费服务，如果不想自己动手，但想移除 TS 或其他模块？试试懒人套餐！
 
 > [!NOTE]
-> 如果你有移动端 H5 需求，试试新的开源模板 [MobVue](https://github.com/un-pany/mobvue)。
-
-## 使用
-
-<details>
-<summary>推荐环境</summary>
-
-<br>
-
-- 新版 `Visual Studio Code` 或者 AI IDE `Cursor` 与 `Trae`
-- 安装 `.vscode/extensions.json` 文件中推荐的插件
-- `node` 20.19+ 或 22.12+
-- `pnpm` 10+
-
-</details>
-
-<details>
-<summary>本地开发</summary>
-
-<br>
-
-```bash
-# 克隆项目
-git clone https://github.com/un-pany/v3-admin-vite.git
-
-# 进入项目目录
-cd v3-admin-vite
-
-# 安装依赖
-pnpm i
-
-# 启动服务
-pnpm dev
-```
-
-</details>
-
-<details>
-<summary>打包构建</summary>
-
-<br>
-
-```bash
-# 打包构建预发布环境
-pnpm build:staging
-
-# 打包构建生产环境
-pnpm build
-```
-
-</details>
-
-<details>
-<summary>本地预览</summary>
-
-<br>
-
-```bash
-# 先执行打包构建命令生成 dist 目录后再执行以下预览命令
-pnpm preview
-```
-
-</details>
-
-<details>
-<summary>代码检查</summary>
-
-<br>
-
-```bash
-# 代码校验与格式化
-pnpm lint
-
-# 单元测试
-pnpm test
-```
-
-</details>
-
-<details>
-<summary>代码提交规范</summary>
-
-<br>
-
-`feat` 新功能
-
-`fix` 修复错误
-
-`perf` 性能优化
-
-`refactor` 重构代码
-
-`docs` 文档和注释
-
-`types` 类型相关
-
-`test` 单测相关
-
-`ci` 持续集成、工作流
-
-`revert` 撤销更改
-
-`chore` 琐事（更新依赖、修改配置等）
-
-</details>
+> 目前正在开发中，请耐心等待
 
 
 
-## 特性
 
-**结构精简**：没有复杂的封装，没有复杂的类型体操，刚好够用
+## 自助洗车特性
 
-**详细的注释**：各个配置项都写有尽可能详细的注释
+**智能化服务**：物联网技术：通过STM32主控芯片或ESP32模块实现设备自动化控制，支持水流量监测、清洁剂余量实时监控 。
 
-**最新的依赖**：及时更新所有三方依赖至最新版
+**24小时运营**：无人值守：通过小程序或自助终端完成支付、启动洗车，无需人工干预 。 ‌
 
-**有一点规范**：代码风格统一、命名风格统一、注释风格统一
+**标准化流程**：固定清洗步骤：清水冲洗→泡沫清洁→吸尘处理等标准化操作，确保服务一致性 。
 
-## 内置功能
+**节能环保**：循环水系统：减少单次洗车用水量60% 。 ‌
 
-**用户管理**：登录、登出演示
+**数据管理**：远程监控：云服务器实时上传设备状态，支持故障预警。
 
-**权限管理**：页面级权限（动态路由）、按钮级权限（权限指令、权限函数）、路由守卫
 
-**多环境**：开发环境（development）、预发布环境（staging）、生产环境（production）
-
-**多主题**：普通、黑暗、深蓝, 三种主题模式
-
-**多布局**：左侧、顶部、混合, 三种布局模式
-
-**首页**：根据不同用户显示不同的 Dashboard 页面
-
-**错误页**：403、404
-
-**兼容移动端**：布局兼容移动端页面分辨率
-
-**其他**：SVG 雪碧图、动态侧边栏、动态面包屑、标签页快捷导航、内容区放大与全屏、组合式函数
 
 ## 技术栈
 
@@ -210,9 +91,6 @@ pnpm test
 
 **UnoCSS**：具有高性能且极具灵活性的即时原子化 CSS 引擎
 
-## 项目预览图
-
-![preview](./src/common/assets/images/docs/preview.png)
 
 
 
