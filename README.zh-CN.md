@@ -1,6 +1,6 @@
 <div align="center">
   <img alt="logo" width="120" height="120" src="./src/common/assets/images/layouts/logo.png">
-  <h1>小犀牛自助洗车前端画面</h1>
+  <h1>小犀牛自助洗车</h1>
 </div>
 
 
