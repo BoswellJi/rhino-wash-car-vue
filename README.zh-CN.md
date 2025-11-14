@@ -10,11 +10,15 @@ V3 Admin Vite 是一个精心制作的后台管理系统模板，基于 Vue3、V
 
 ## 项目预览图
 
-**用户管理列表示例图**
+**用户管理列表示例图** 
 
 <table>
     <tr>
         <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
+    </tr>
+	 <tr>
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userAdd.png"/></td>
+		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userUpdate.png"/></td>
     </tr>
 </table>
 
@@ -24,9 +28,7 @@ V3 Admin Vite 是一个精心制作的后台管理系统模板，基于 Vue3、V
 
 <table>
     <tr>
-	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userAdd.png"/></td>
-		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userUpdate.png"/></td>
-
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/roleListView.jpg"/></td>
     </tr>
 </table>
 
