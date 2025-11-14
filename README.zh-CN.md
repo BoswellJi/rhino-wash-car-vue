@@ -40,10 +40,10 @@
 > 欢迎体验全新的 2.0 版本，它是一次匠心之作！。
 
 > [!WARNING]
-> 4.x 版本如果没有严重的 BUG 将不再维护！
+> 将持续优化和维护系统的稳定性和操作
 
 > [!TIP]
-> 正式推出付费服务，如果不想自己动手，但想移除 TS 或其他模块？试试懒人套餐！
+> 正式推出付费服务
 
 > [!NOTE]
 > 目前正在开发中，请耐心等待
@@ -67,29 +67,12 @@
 
 ## 技术栈
 
-**Vue3**：采用 Vue3 + script setup 最新的 Vue3 组合式 API
+**Vue3**：前端采用Vue、Element UI
 
-**Element Plus**：Element UI 的 Vue3 版本
+**Java**：后端采用Spring Boot、Spring Security、Redis。
 
-**Pinia**：传说中的 Vuex5
+**Jwt**：权限认证使用Jwt，支持多终端认证系统。
 
-**Vite**：真的很快
-
-**Vue Router**：路由路由
-
-**TypeScript**：JavaScript 语言的超集
-
-**pnpm**：更快速的，节省磁盘空间的包管理工具
-
-**Scss**：和 Element Plus 保持一致
-
-**CSS 变量**：主要控制项目的布局和颜色
-
-**ESLint**：代码校验与格式化
-
-**Axios**：发送网络请求（已封装好）
-
-**UnoCSS**：具有高性能且极具灵活性的即时原子化 CSS 引擎
 
 
 
