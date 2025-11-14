@@ -380,7 +380,7 @@
 | code   | string | 状态码     | 200                              |
 
 
-## 用户状态修改
+## 修改用户状态
 
 **接口名**：`/system/user/changeStatus`
 
