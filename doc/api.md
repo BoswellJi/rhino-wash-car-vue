@@ -444,7 +444,7 @@
 
 | 字段名      | 类型   | 必填 | 说明       | 示例值                 |
 | ----------- | ------ | ---- | ---------- | ---------------------- |
-| userId    | int| 可选   | 系统用户id       |1              |
+| userId    | int| 否   | 系统用户id       |1              |
 
 
 **响应参数**:
@@ -515,6 +515,80 @@
 | posts.postCode| String|岗位编号|001|
 | posts.postName| String|岗位名称|技术开发|
 | posts.postSort| int|显示顺序|1|
+
+
+## 根据用户编号获取授权角色
+
+**接口名**：`/system/user/authRole/{userId}`
+
+**请求方式**： GET
+
+**接口描述**： 根据用户编号获取授权角色
+
+**请求参数**:  Query Params
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| userId    | int| 是   | 系统用户id       |1              |
+
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+| roles   | array |角色数组     | []                     |
+|&emsp;&emsp;roleId| int |角色id|1|
+|&emsp;&emsp;roleName| String|角色名称|超级管理员|
+|&emsp;&emsp;roleKey| String|角色权限字符串|admin|
+|&emsp;&emsp;roleSort| String|显示顺序|1|
+|&emsp;&emsp;dataScope| String|数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限|1|
+|&emsp;&emsp;menuCheckStrictly| int|菜单树选择项是否关联显示|false|
+|&emsp;&emsp;deptCheckStrictly| int|部门树选择项是否关联显示|false|
+|&emsp;&emsp;status| int |角色状态（1正常 0停用）|1|
+|&emsp;&emsp;flag| int |角色状态（1正常 0停用）|1|
+|&emsp;&emsp;admin| boolean |是否为管理员（true是 flase否）|true|
+| user   | array |用户数组     | []                     |
+| &emsp;&emsp;createBy| String | 创建者     | 小犀牛    |
+| &emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+| &emsp;&emsp;remark| String |备注   |null|
+| &emsp;&emsp;userId| int| 用户id     | 1    |
+| &emsp;&emsp;deptId| int| 部门id     | 1    |
+| &emsp;&emsp;merchantId| int| 商家     | 1    |
+| &emsp;&emsp;userName| String | 用户名称     | 小犀牛    |
+| &emsp;&emsp;nickNamey| String | 昵称     | 小犀牛    |
+| &emsp;&emsp;email| String | 邮箱     | ry@163.com    |
+| &emsp;&emsp;.phonenumber| String | 手机     |16889009098    |
+| &emsp;&emsp;sex|  String|性别     |（0男 1女 2未知|
+| &emsp;&emsp;avatar| String|头像地址     |""|
+| &emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
+| &emsp;&emsp;delFlag| String|删除标志     |账号状态（1正常 0停用）|
+| &emsp;&emsp;loginIp| String|最后登录IP     |127.0.0.1|
+| &emsp;&emsp;loginDate| String|最后登录时间    |2025-11-08T13:10:46.000+08:00|
+| &emsp;&emsp;pwdUpdateDate| String|最后密码修改时间    |2025-11-08|
+| &emsp;&emsp;dept| json|部门数据对象   |{}|
+| &emsp;&emsp;&emsp;&emsp;deptId| int |部门id   |1|
+| &emsp;&emsp;&emsp;&emsp;parentId| int |部门父级id   |1|
+| &emsp;&emsp;&emsp;&emsp;ancestors| String|祖级列表   |1|
+| &emsp;&emsp;&emsp;&emsp;deptName| String|部门名称   |深圳总公司|
+| &emsp;&emsp;&emsp;&emsp;orderNum| int |显示顺序   |1|
+| &emsp;&emsp;&emsp;&emsp;leader| String|负责人   |admin|
+| &emsp;&emsp;&emsp;&emsp;status| int |部门状态（1正常 0停用）|1|
+| &emsp;&emsp;&emsp;&emsp;children| array|子级数据| [] |
+| &emsp;&emsp;roles| array|角色数据| [] |
+| &emsp;&emsp;&emsp;&emsp;roleId| int |角色id|1|
+| &emsp;&emsp;&emsp;&emsp;roleName| String|角色名称|超级管理员|
+| &emsp;&emsp;&emsp;&emsp;roleKey| String|角色权限字符串|admin|
+| &emsp;&emsp;&emsp;&emsp;roleSort| String|显示顺序|1|
+| &emsp;&emsp;&emsp;&emsp;dataScope| String|数据范围（1：全部数据权限 2：自定数据权限 3：本部门数据权限 4：本部门及以下数据权限|1|
+| &emsp;&emsp;&emsp;&emsp;menuCheckStrictly| int|菜单树选择项是否关联显示|false|
+| &emsp;&emsp;&emsp;&emsp;deptCheckStrictly| int|部门树选择项是否关联显示|false|
+| &emsp;&emsp;&emsp;&emsp;status| int |角色状态（1正常 0停用）|1|
+| &emsp;&emsp;&emsp;&emsp;flag| int |角色状态（1正常 0停用）|1|
+| &emsp;&emsp;&emsp;&emsp;admin| boolean |是否为管理员（true是 flase否）|true|
+| &emsp;&emsp;admin| boolean |是否为管理员（true是 flase否）|true|
+
 
 
 ## 用户信息导出
