@@ -432,7 +432,7 @@
 | code   | string | 状态码     | 200                              |
 
 
-## 根据用户编号获取详细信息
+## 查询用户详细
 
 **接口名**：`/system/user/{userId}`
 
@@ -517,7 +517,7 @@
 | posts.postSort| int|显示顺序|1|
 
 
-## 根据用户编号获取授权角色
+## 查询角色授权
 
 **接口名**：`/system/user/authRole/{userId}`
 
@@ -559,7 +559,7 @@
 | &emsp;&emsp;userName| String | 用户名称     | 小犀牛    |
 | &emsp;&emsp;nickNamey| String | 昵称     | 小犀牛    |
 | &emsp;&emsp;email| String | 邮箱     | ry@163.com    |
-| &emsp;&emsp;.phonenumber| String | 手机     |16889009098    |
+| &emsp;&emsp;phonenumber| String | 手机     |16889009098    |
 | &emsp;&emsp;sex|  String|性别     |（0男 1女 2未知|
 | &emsp;&emsp;avatar| String|头像地址     |""|
 | &emsp;&emsp;status| String|账号状态     |账号状态（1正常 0停用）|
@@ -588,6 +588,32 @@
 | &emsp;&emsp;&emsp;&emsp;flag| int |角色状态（1正常 0停用）|1|
 | &emsp;&emsp;&emsp;&emsp;admin| boolean |是否为管理员（true是 flase否）|true|
 | &emsp;&emsp;admin| boolean |是否为管理员（true是 flase否）|true|
+
+
+## 保存授权角色
+
+**接口名**：`/system/user/authRole`
+
+**请求方式**： PUT
+
+**请求数据类型**:`body application/json`
+
+**接口描述**：用户密码重置
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|userId    | int| 是   | 系统用户Id     |  2    |
+|roleIds    | String| 是   | 角色id       |"1,2,3" |
+
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
 
 
 
