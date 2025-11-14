@@ -4,17 +4,18 @@
 </div>
 
 
-## 简介
+## 项目简介
 
-V3 Admin Vite 是一个精心制作的后台管理系统模板，基于 Vue3、Vite、TypeScript、Element Plus 等主流技术，并且具备良好的 AI Vibe Coding 体验！
+小犀牛自助洗车以构筑“智慧便利生活”为使命，秉承“智慧便民，公益共享”的服务原则，提供一种新的洗车方式，彻底告别洗车难、洗车贵。
+通过更快速、便捷、便宜的洗车方式，让人们释放出更多的时间和空间，享受动手洗车的乐趣，洗出健康生活新潮流！
 
-## 项目预览图
+## 项目参考图
 
-**用户管理列表示例图** 
+**用户管理参考例图** 
 
 <table>
     <tr>
-        <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
+        <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
     </tr>
 	 <tr>
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userAdd.png"/></td>
@@ -23,8 +24,7 @@ V3 Admin Vite 是一个精心制作的后台管理系统模板，基于 Vue3、V
 </table>
 
 
-
-**用户管理添加修改例图**
+**角色管理参考图**
 
 <table>
     <tr>
