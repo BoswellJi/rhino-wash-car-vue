@@ -288,7 +288,7 @@
 |data   | array | 部门数据     | []                     |
 |&emsp;&emsp;id   | int| 部门id     | 1                    |
 |&emsp;&emsp;label| String | 部门名称     | 苏州公司    |
-|&emsp;&emsp;disabled| boolean| 是否有效    |true|
+|&emsp;&emsp;disabled| boolean| 是否禁用    |true|
 |&emsp;&emsp;children| array|子部门  |[]|
 |&emsp;&emsp;children.id| int|子部门id  |1|
 |&emsp;&emsp;children.label| String|子部门名称  |市场部|
@@ -680,6 +680,42 @@
 |&emsp;&emsp;deptCheckStrictly| int|1     |部门树选择项是否关联显示|
 |&emsp;&emsp;status| String|角色状态     |角色状态（1正常 0停用）|
 |&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
+
+# 菜单接口
+
+## 获取菜单下拉树结构
+
+**接口名**：`/system/menu/treeSelect`
+
+**请求方式**：GET
+
+**接口描述**：查询菜单下拉树结构
+
+**请求参数**：
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | array| 菜单数据     | []                     |
+|&emsp;&emsp;id| int| 菜单名称   系统管理|
+|&emsp;&emsp;label| String |备注   |超级管理员|
+|&emsp;&emsp;disabled| boolean|   是否禁用   | false    |
+|&emsp;&emsp;children| array| 子菜单数据     | []    |
+|&emsp;&emsp;&emsp;&emsp;id| int | 子菜单id     |1|
+|&emsp;&emsp;&emsp;&emsp;label| String|子菜单名称     |"用户管理"    |
+|&emsp;&emsp;&emsp;&emsp;disabled| boolean| 是否禁用     |false   |
+|&emsp;&emsp;&emsp;&emsp;children|  array|子菜单功能数据     |[]|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id| int|功能id     |1|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label| String|功能名称     |用户查询|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled| boolean|是否禁用     |false|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id| int|功能id     |1|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label| String|功能名称     |用户新增|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled|boolean|是否禁用     |false|
+
+
 
 
 
