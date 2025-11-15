@@ -681,6 +681,63 @@
 |&emsp;&emsp;status| String|角色状态     |角色状态（1正常 0停用）|
 |&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
 
+## 新增角色
+
+**接口名**：`/system/role`
+
+**请求方式**： POST
+
+**请求数据类型**:`body application/json`
+
+**接口描述**：添加角色
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|roleName    | String| 是   | 角色名称     |  "技术部"    |
+|roleKey    | String| 是   | 角色权限字符串       |"common" |
+|roleSort    | int| 是   | 显示顺序       |1 |
+|status    | int| 是   | 角色状态（1正常 0停用）       |1 |
+|remark    | String| 是   | 备注       |"" |
+|menuIds    | array| 是   | 菜单id       |[1,2,3]，调取 /system/menu/treeSelect 接口|
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+
+## 修改角色
+
+**接口名**：`/system/role`
+
+**请求方式**： PUT
+
+**请求数据类型**:`body application/json`
+
+**接口描述**：修改角色
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|roleId    | int| 是   | 角色id     |  1   |
+|roleName    | String| 是   | 角色名称     |  "技术部"    |
+|roleKey    | String| 是   | 角色权限字符串       |"common" |
+|roleSort    | int| 是   | 显示顺序       |1 |
+|status    | int| 是   | 角色状态（1正常 0停用）       |1 |
+|remark    | String| 是   | 备注       |"" |
+|menuIds    | array| 是   | 菜单id       |[1,2,3],调取/system/menu/roleMenuTreeSelect/{roleId} 接口 |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+
 # 菜单接口
 
 ## 获取菜单下拉树结构
@@ -713,6 +770,41 @@
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled| boolean|是否禁用     |false|
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id| int|功能id     |1|
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label| String|功能名称     |用户新增|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled|boolean|是否禁用     |false|
+
+## 根据角色ID查询菜单下拉树结构
+
+**接口名**：`/system/menu/roleMenuTreeSelect/{roleId}`
+
+**请求方式**：GET
+
+**接口描述**：加载对应角色菜单列表树
+
+**请求参数**：
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|roleId    | int| 是   |角色Id     |  1    |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|menus   | array| 菜单数据     | []                     |
+|&emsp;&emsp;id| int| 菜单id   100|
+|&emsp;&emsp;label| String |菜单名称   |超级管理员|
+|&emsp;&emsp;disabled| boolean|   是否禁用   | false    |
+|&emsp;&emsp;children| array| 子菜单数据     | []    |
+|&emsp;&emsp;&emsp;&emsp;id| int | 子菜单id     |1|
+|&emsp;&emsp;&emsp;&emsp;label| String|子菜单名称     |"用户管理"    |
+|&emsp;&emsp;&emsp;&emsp;disabled| boolean| 是否禁用     |false   |
+|&emsp;&emsp;&emsp;&emsp;children|  array|子菜单功能数据     |[]|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id| int|功能id     |1|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label| String|功能名称     |用户查询|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled| boolean|是否禁用     |false|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id| int|功能id     |1|
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label| String|功能名称|用户新增|
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled|boolean|是否禁用     |false|
 
 
