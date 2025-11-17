@@ -738,6 +738,46 @@
 | msg    | string | 响应值 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
 
+## 修改保存数据权限
+
+**接口名**：`/system/role/dataScope`
+
+**请求方式**： PUT
+
+**请求数据类型**:`body application/json`
+
+**接口描述**：角色数据权限
+
+**请求参数**
+
+
+
+## 获取对应角色部门树列表
+
+**接口名**：`/system/role/deptTree/{roleId}`
+
+**请求方式**：GET
+
+**接口描述**：根据角色ID查询部门树结构
+
+**请求参数**：
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| roleId    | int| 是   | 角色id       |1              |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|depts   | array| 部门数据     | []                     |
+|&emsp;&emsp;id| int| 部门id |  1|
+|&emsp;&emsp;label| String |部门名称   |超级管理员|
+|&emsp;&emsp;disabled| boolean|   是否禁用   | false    |
+|&emsp;&emsp;children| array| 子部门数据     | []    |
+
 # 菜单接口
 
 ## 获取菜单下拉树结构
@@ -757,8 +797,8 @@
 |msg    | string | 响应值 | "操作成功"                        |
 |code   | string | 状态码     | 200                              |
 |data   | array| 菜单数据     | []                     |
-|&emsp;&emsp;id| int| 菜单名称   系统管理|
-|&emsp;&emsp;label| String |备注   |超级管理员|
+|&emsp;&emsp;id| int| 菜单id |  1|
+|&emsp;&emsp;label| String |菜单名称   |超级管理员|
 |&emsp;&emsp;disabled| boolean|   是否禁用   | false    |
 |&emsp;&emsp;children| array| 子菜单数据     | []    |
 |&emsp;&emsp;&emsp;&emsp;id| int | 子菜单id     |1|
