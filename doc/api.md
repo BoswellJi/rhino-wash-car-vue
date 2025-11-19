@@ -840,6 +840,37 @@
 |&emsp;&emsp;disabled| boolean|   是否禁用   | false    |
 |&emsp;&emsp;children| array| 子部门数据     | []    |
 
+## 查询授权用户列表
+
+**接口名**：`/system/role/authUser/allocatedList`
+
+**请求方式**： GET
+
+**接口描述**： 查询已分配用户角色列表
+
+**请求参数**： Query Params
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| pageNum    | int| 是   | 页码     |  "1"             |
+| pageSize    | int | 是   | 每页记录数       | "10"              |
+| roleId    | int | 否  | 角色id     | 2                |
+| userName  | string | 否 | 用户名   | "admin"            |
+| phonenumber  | string | 否  | 手机号  | 15995778674     |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|total   | int | 总数据     | 10                     |
+|rows   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;userId| int |用户id   |1|
+|&emsp;&emsp;deptId| int| 部门id     | 2    |
+
+
 # 菜单接口
 
 ## 获取菜单下拉树结构
