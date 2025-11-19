@@ -869,6 +869,7 @@
 |&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
 |&emsp;&emsp;userId| int |用户id   |1|
 |&emsp;&emsp;deptId| int| 部门id     | 2    |
+|&emsp;&emsp;merchantId| int| 商家id     | 2    |
 
 
 # 菜单接口
