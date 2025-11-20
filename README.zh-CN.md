@@ -16,14 +16,12 @@
 <table>
     <tr>
        <td colspan="2">用户管理列表页面</td>
-	<td>
+	</tr>
     <tr>
         <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
     </tr>
 	 <tr>
-	    <td>添加用户页面</td>
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userAdd.png"/></td>
-		<td>修用户页面</td>
 		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userUpdate.png"/></td>
     </tr>
 </table>
@@ -32,6 +30,9 @@
 **角色管理参考图**
 
 <table>
+    <tr>
+       <td colspan="2">角色管理列表页面</td>
+	</tr>
     <tr>
 	    <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/roleListView.jpg"/></td>
     </tr>
