@@ -30,6 +30,14 @@
     <tr>
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/roleListView.jpg"/></td>
     </tr>
+	 <tr>
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_autho_1.png"/></td>
+		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_autho_2.png"/></td>
+    </tr>
+	<tr>
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_userlist.png"/></td>
+		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_user.png"/></td>
+    </tr>
 </table>
 
 
