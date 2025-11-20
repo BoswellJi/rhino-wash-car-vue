@@ -15,7 +15,9 @@
 
 <table>
     <tr>
-	    <td colspan="2"> <h1>用户管理列表页面</h1></td>
+       <td colspan="2">用户管理列表页面</td>
+	<td>
+    <tr>
         <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
     </tr>
 	 <tr>
