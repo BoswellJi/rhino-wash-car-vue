@@ -926,7 +926,7 @@
 | msg    | string | 响应值 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
 
-## 批量取消授权按钮操作
+## 批量取消用户授权角色
 
 **接口名**：`/system/role/authUser/cancelAll`
 
