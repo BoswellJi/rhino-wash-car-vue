@@ -623,7 +623,7 @@
 
 **请求方式**： POST
 
-**请求数据类型**:`body application/json`
+**请求数据类型**:`body application/form-data`
 
 **接口描述**：用户信息导出
 
@@ -974,9 +974,108 @@
 | msg    | string | 响应值 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
 
+## 角色信息导出
+
+**接口名**：`/system/role/export`
+
+**请求方式**： POST
+
+**请求数据类型**:`body application/form-data`
+
+**接口描述**：用户信息导出
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|roleName    |String| 否   | 角色名称      |"技术部"|
+|roleKey    |String| 否   | 权限字符      |common|
+|status    |int| 否   | 角色状态 |1|
+|beginTime    |datetime| 否   | 创建时间      |2025-11-01|
+|endTime    |datetime| 否   | 创建时间      |2025-11-01|
+
 
 
 # 菜单接口
+
+## 获取菜单列表
+
+**接口名**：`/system/menu/list`
+
+**请求方式**： GET
+
+**接口描述**： 获取菜单列表
+
+**请求数据类型**:`body application/form-data`
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| menuName    |String| 否   | 菜单名称      |"系统管理"|
+| status    |int| 否   | 菜单状态（1正常 0停用） |1|
+
+**响应参数**:
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | array| 菜单数据     | []                     |
+|&emsp;&emsp;createTime   | datetime| 创建时间     | 2025-11-06 21:25:57 |
+|&emsp;&emsp;menuId   | int| 菜单id    | 1   |
+|&emsp;&emsp;menuName   | String| 菜单名称     | "" |
+|&emsp;&emsp;parentId   | int| 父菜单ID     | 1  |
+|&emsp;&emsp;orderNum   | int| 显示顺序    | 1  |
+|&emsp;&emsp;path   | String| 路由地址     | ""  |
+|&emsp;&emsp;query   | String| 路由参数    | "" |
+|&emsp;&emsp;routeName   | String| 路由名称    | "" |
+|&emsp;&emsp;isFrame   | int| 是否为外链（0是 1否）    | 1  |
+|&emsp;&emsp;isCache   | int | 是否缓存（0缓存 1不缓存）    | 1  |
+|&emsp;&emsp;menuType   | String| 菜单类型（M目录 C菜单 F按钮）     | M   |
+|&emsp;&emsp;visible   | int| 菜单状态（1显示 0隐藏）     | 1 |
+|&emsp;&emsp;status   | int| 菜单状态（1正常 0停用）     | 1  |
+|&emsp;&emsp;perms   | String| 权限标识     | ""   |
+|&emsp;&emsp;icon   | String| 菜单图标     | ""  |
+|&emsp;&emsp;children   | array| 子菜单     | [] |
+
+## 查询菜单详细
+
+**接口名**：`/system/menu/{menuId}`
+
+**请求方式**： GET
+
+**请求数据类型**:
+
+**接口描述**：根据菜单编号获取详细信息
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| menuId    | int| 必填  | 菜单id       |1|
+
+**响应参数**:
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | array| 菜单数据     | {}                    |
+|&emsp;&emsp;createTime   | datetime| 创建时间     | 2025-11-06 21:25:57 |
+|&emsp;&emsp;menuId   | int| 菜单id    | 1   |
+|&emsp;&emsp;menuName   | String| 菜单名称     | "" |
+|&emsp;&emsp;parentId   | int| 父菜单ID     | 1  |
+|&emsp;&emsp;orderNum   | int| 显示顺序    | 1  |
+|&emsp;&emsp;path   | String| 路由地址     | ""  |
+|&emsp;&emsp;query   | String| 路由参数    | "" |
+|&emsp;&emsp;routeName   | String| 路由名称    | "" |
+|&emsp;&emsp;isFrame   | int| 是否为外链（0是 1否）    | 1  |
+|&emsp;&emsp;isCache   | int | 是否缓存（0缓存 1不缓存）    | 1  |
+|&emsp;&emsp;menuType   | String| 菜单类型（M目录 C菜单 F按钮）     | M   |
+|&emsp;&emsp;visible   | int| 菜单状态（1显示 0隐藏）     | 1 |
+|&emsp;&emsp;status   | int| 菜单状态（1正常 0停用）     | 1  |
+|&emsp;&emsp;perms   | String| 权限标识     | ""   |
+|&emsp;&emsp;icon   | String| 菜单图标     | ""  |
+|&emsp;&emsp;children   | array| 子菜单     | [] |
 
 ## 获取菜单下拉树结构
 
@@ -1044,6 +1143,38 @@
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;id| int|功能id     |1|
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;label| String|功能名称|用户新增|
 |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;disabled|boolean|是否禁用     |false|
+
+
+## 新增菜单
+
+**接口名**：`/system/menu`
+
+**请求方式**： POST
+
+**请求数据类型**:`body application/json`
+
+**接口描述**： 新增菜单
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| parentId    | int| 是   | 父菜单Id     |  1    |
+| menuName    | string | 是   |菜单名称      | "管理系统"              |
+| icon | string | 是  | 菜单图标     | ""                |
+| menuType  | int | 是   | 菜单类型   |（M目录 C菜单 F按钮）           |
+| orderNum  | int | 是  | 显示顺序  | 0）     |
+| isFrame   | int | 是   |是否为外链 0是 1否   | 1|
+| isCache   | int | 是   | 是否缓存  |0缓存 1不缓存 |
+| visible   | int| 是    | 菜单状态  | 1显示 0隐藏 |
+| status    | int| 是     | 菜单状态  |1正常 0停用 |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
 
 
 
