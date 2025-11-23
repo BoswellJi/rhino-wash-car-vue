@@ -59,7 +59,14 @@
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_userlist.png"/></td>
 		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_user.png"/></td>
     </tr>
+	 <tr>
+       <td colspan="2">菜单管理列表页面</td>
+	</tr>
+    <tr>
+	    <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/menu_list.png"/></td>
+    </tr>
 </table>
+
 
 
 
