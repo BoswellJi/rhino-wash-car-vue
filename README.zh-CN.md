@@ -70,6 +70,10 @@
     <tr>
 	    <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/menu_list.png"/></td>
     </tr>
+	 <tr>
+	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/add_menu.png"/></td>
+		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/add_menu_01.png"/></td>
+    </tr>
 </table>
 
 
