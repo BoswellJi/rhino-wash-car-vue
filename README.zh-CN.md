@@ -13,12 +13,19 @@
 
 **用户管理参考例图** 
 
+
 <table>
     <tr>
        <td colspan="2">用户管理列表页面</td>
 	</tr>
     <tr>
         <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userListView.png"/></td>
+    </tr>
+	<tr>
+       <td colspan="2">用户分配绝<br>调用API接口/system/user/authRole </td>
+	</tr>
+	    <tr>
+        <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/user_role.png"/></td>
     </tr>
 	 <tr>
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/userAdd.png"/></td>
@@ -45,6 +52,10 @@
 		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_autho_2.png"/></td>
     </tr>
 	<tr>
+	<tr>
+	  <td>分配用户<br> 调用API接口/system/role/authUser/allocatedList</td>
+	  <td>分配用户新增时<br> 数据范围API接口 /system/role/authUser/unallocatedList</td>
+	</tr>
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_userlist.png"/></td>
 		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_user.png"/></td>
     </tr>
