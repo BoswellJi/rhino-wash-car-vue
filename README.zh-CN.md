@@ -36,6 +36,10 @@
     <tr>
 	    <td colspan="2"><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/roleListView.jpg"/></td>
     </tr>
+	<tr>
+	  <td>分配数据权限 调用API接口/system/role/dataScope</td>
+	  <td>分配数据权限 数据范围API接口 /system/role/deptTree/{roleId}</td>
+	</tr>
 	 <tr>
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_autho_1.png"/></td>
 		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_autho_2.png"/></td>
