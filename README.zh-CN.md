@@ -13,7 +13,6 @@
 
 **用户管理参考例图** 
 
-
 <table>
     <tr>
        <td colspan="2">用户管理列表页面</td>
@@ -59,6 +58,12 @@
 	    <td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_userlist.png"/></td>
 		<td><img src="https://elephant-platform.oss-cn-beijing.aliyuncs.com/uploads/monitor/role_allot_user.png"/></td>
     </tr>
+
+</table>
+
+**菜单管理参考例图** 
+
+<table>
 	 <tr>
        <td colspan="2">菜单管理列表页面</td>
 	</tr>
