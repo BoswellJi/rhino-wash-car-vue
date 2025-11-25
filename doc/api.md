@@ -1305,6 +1305,125 @@
 |&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
 |&emsp;&emsp;children| array|子级部门     |[]|
 
+## 查询部门详细
+
+**接口名**：`/system/dept/{deptId}`
+
+**请求方式**： GET
+
+**接口描述**： 查询部门详细
+
+**请求参数**：
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| deptId  | int | 是  | 部门id  | 1     |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | json | 列表行数     | {}                     |
+|&emsp;&emsp;createBy| String |创建人   |超级管理员|
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;deptId| int| 部门id     | 1    |
+|&emsp;&emsp;parentId| int | 父级id     | 1    |
+|&emsp;&emsp;ancestors| String | 祖级列表     |0，1，2    |
+|&emsp;&emsp;deptName| String |部门名称     | 技术部    |
+|&emsp;&emsp;orderNum| int | 排序     |1  |
+|&emsp;&emsp;leader|  String|领导人     |admin|
+|&emsp;&emsp;phone| String|电话     |1388798787|
+|&emsp;&emsp;email| String|邮箱     |123@qq.com|
+|&emsp;&emsp;status| String|角色状态     |角色状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
+|&emsp;&emsp;children| array|子级部门     |[]|
+
+## 新增部门
+
+**接口名**：`/system/dept`
+
+**请求方式**： POST
+
+**请求数据类型**:`body application/json`
+
+**接口描述**： 新增部门
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| parentId    | int | 是   |父级id     | 1              |
+| deptName | string | 否  | 部门名称     | 技术部                |
+| orderNum  | int | 否   | 排序   |1           |
+| leader  | String | 否  | 负责人  | admin     |
+| phone   | String | 否   |电话   | 17890998789|
+| email   | String | 否   | 邮箱  |xn@123.com |
+| status   | int| 否    | 菜单状态  | 部门状态（1正常 0停用） |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+
+
+## 修改部门
+
+**接口名**：`/system/dept`
+
+**请求方式**： PUT
+
+**请求数据类型**:`body application/json`
+
+**接口描述**： 修改部门
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| deptId    | int| 是   | 部门Id     |  1    |
+| parentId    | int | 是   |父级id     | 1              |
+| deptName | string | 否  | 部门名称     | 技术部                |
+| orderNum  | int | 否   | 排序   |1           |
+| leader  | String | 否  | 负责人  | admin     |
+| phone   | String | 否   |电话   | 17890998789|
+| email   | String | 否   | 邮箱  |xn@123.com |
+| status   | int| 否    | 菜单状态  | 部门状态（1正常 0停用） |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+
+## 删除部门
+
+**接口名**：`/system/dept/{deptId}`
+
+**请求方式**： DELETE
+
+**请求数据类型**:
+
+**接口描述**：根据部门id删除部门信息
+
+**请求参数**
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| deptId    | Long| 必填  | 部门id       |1 |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+| msg    | string | 响应值 | "操作成功"                        |
+| code   | string | 状态码     | 200                              |
+
+
 
 
 
