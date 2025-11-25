@@ -1232,6 +1232,80 @@
 | msg    | string | 响应值 | "操作成功"                        |
 | code   | string | 状态码     | 200                              |
 
+# 部门接口
+
+## 获取部门列表
+
+**接口名**：`/system/dept/list`
+
+**请求方式**： GET
+
+**接口描述**： 获取部门列表
+
+**请求参数**： Query Params
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| deptName  | string | 否 | 部门名称  | "犀牛科技"            |
+| status  | int | 否  | 部门状态  | 状态（1正常 0停用）     |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createBy| String |创建人   |超级管理员|
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;deptId| int| 部门id     | 1    |
+|&emsp;&emsp;parentId| int | 父级id     | 1    |
+|&emsp;&emsp;ancestors| String | 祖级列表     |0，1，2    |
+|&emsp;&emsp;deptName| String |部门名称     | 技术部    |
+|&emsp;&emsp;orderNum| int | 排序     |1  |
+|&emsp;&emsp;leader|  String|领导人     |admin|
+|&emsp;&emsp;phone| String|电话     |1388798787|
+|&emsp;&emsp;email| String|邮箱     |123@qq.com|
+|&emsp;&emsp;status| String|角色状态     |角色状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
+|&emsp;&emsp;children| array|子级部门     |[]|
+
+## 查询部门列表（排除节点）
+
+**接口名**：`/system/dept/list/exclude/{deptId}`
+
+**请求方式**： GET
+
+**接口描述**： 获取部门列表 （排除节点）
+
+**请求参数**：
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| deptId  | int | 是  | 部门ID  | 1    |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|data   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createBy| String |创建人   |超级管理员|
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;deptId| int| 部门id     | 1    |
+|&emsp;&emsp;parentId| int | 父级id     | 1    |
+|&emsp;&emsp;ancestors| String | 祖级列表     |0，1，2    |
+|&emsp;&emsp;deptName| String |部门名称     | 技术部    |
+|&emsp;&emsp;orderNum| int | 排序     |1  |
+|&emsp;&emsp;leader|  String|领导人     |admin|
+|&emsp;&emsp;phone| String|电话     |1388798787|
+|&emsp;&emsp;email| String|邮箱     |123@qq.com|
+|&emsp;&emsp;status| String|角色状态     |角色状态（1正常 0停用）|
+|&emsp;&emsp;delFlag| String|删除标志     |（1正常 2删除）|
+|&emsp;&emsp;children| array|子级部门     |[]|
+
+
 
 
 
