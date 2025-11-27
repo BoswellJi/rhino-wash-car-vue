@@ -1,232 +1,152 @@
 <div align="center">
   <img alt="logo" width="120" height="120" src="./src/common/assets/images/layouts/logo.png">
-  <h1>V3 Admin Vite</h1>
+  <h1>小犀牛自助洗车</h1>
 </div>
 
-[![github release](https://img.shields.io/github/v/release/un-pany/v3-admin-vite?style=flat)](https://github.com/un-pany/v3-admin-vite/releases)
-[![github stars](https://img.shields.io/github/stars/un-pany/v3-admin-vite?style=flat)](https://github.com/un-pany/v3-admin-vite/stargazers)
-[![gitee stars](https://gitee.com/un-pany/v3-admin-vite/badge/star.svg)](https://gitee.com/un-pany/v3-admin-vite/stargazers)
+## 项目介绍
 
-<b>English | <a href="./README.zh-CN.md">中文</a></b>
+Rhino Wash Car Vue 是一个基于 Vue3 技术栈开发的现代化洗车管理系统。该系统提供了完整的洗车业务流程管理功能，包括客户管理、订单处理、服务项目管理、员工管理等核心功能模块，旨在帮助洗车店提高运营效率和服务质量。
 
-## Introduction <a href="https://mp.weixin.qq.com/s/ccuzm4ZlHvN-1XBBN2lduQ"><img src="https://img.shields.io/badge/AI-VibeCoding-black"></a>
+### 核心功能
 
-V3 Admin Vite is a well-crafted backend management system template, built with popular technologies such as Vue3, Vite, TypeScript, and Element Plus, and offers a great AI Vibe Coding experience!
+- **客户管理**：客户信息录入、查询、编辑和删除
+- **订单管理**：创建订单、查询订单历史、订单状态跟踪
+- **服务项目管理**：添加、编辑和删除洗车服务项目及价格
+- **员工管理**：员工信息管理、权限分配
+- **数据统计**：销售数据、客流量等关键指标统计分析
+- **系统管理**：用户权限管理、系统参数配置
 
-## Notifications
+## 安装环境
 
-> [!IMPORTANT]
-> Welcome to experience the brand-new version 5.0, a masterpiece crafted with great care! If it helps you, feel free to give a Star to show your support.
+### 推荐环境
 
-> [!WARNING]
-> Version 4.x will no longer be maintained unless there are critical bugs! [Click to switch to the 4.x branch](https://github.com/un-pany/v3-admin-vite/tree/4.x)
+- **操作系统**：Windows 10/11、macOS、Linux
+- **开发工具**：Visual Studio Code 或 AI IDE Cursor、Trae
+- **Node.js**：20.19+ 或 22.12+
+- **包管理器**：pnpm 10+
 
-> [!TIP]
-> Paid services are officially launched! If you don’t want to do it yourself but want to remove TS or other modules, try the lazy package! [Click to check it out](https://github.com/un-pany/v3-admin-vite/issues/225)
+### VSCode 推荐插件
 
-> [!NOTE]
-> If you have mobile web app requirements, give the new open-source template [MobVue](https://github.com/un-pany/mobvue) a try.
+在项目根目录的 `.vscode/extensions.json` 文件中已配置了推荐的插件列表，包括：
 
-## Usage
+- Volar - Vue3 支持插件
+- TypeScript Vue Plugin (Volar)
+- ESLint
+- Prettier - 代码格式化
+- UnoCSS
+- SVG 相关插件
 
-<details>
-<summary>Recommended Environment</summary>
+## 安装与运行
 
-<br>
-
-- Latest version of `Visual Studio Code` or AI IDE `Cursor` and `Trae`
-- Install the recommended plugins in the `.vscode/extensions.json` file
-- `node` 20.19+ or 22.12+
-- `pnpm` 10+
-
-</details>
-
-<details>
-<summary>Local Development</summary>
-
-<br>
+### 本地开发
 
 ```bash
-# Clone the project
-git clone https://github.com/un-pany/v3-admin-vite.git
+# 克隆项目
+git clone https://github.com/your-username/rhino-wash-car-vue.git
 
-# Enter the project directory
-cd v3-admin-vite
+# 进入项目目录
+cd rhino-wash-car-vue
 
-# Install dependencies
+# 安装依赖
 pnpm i
 
-# Start the development server
+# 启动开发服务器
 pnpm dev
 ```
 
-</details>
-
-<details>
-<summary>Build</summary>
-
-<br>
+### 构建部署
 
 ```bash
-# Build for the staging environment
+# 开发环境构建
+pnpm build:dev
+
+# 测试环境构建
 pnpm build:staging
 
-# Build for the production environment
+# 生产环境构建
 pnpm build
-```
 
-</details>
-
-<details>
-<summary>Local Preview</summary>
-
-<br>
-
-```bash
-# Execute the build command first to generate the dist directory, then run the preview command
+# 本地预览构建结果
 pnpm preview
 ```
 
-</details>
-
-<details>
-<summary>Code Check</summary>
-
-<br>
+### 代码检查与测试
 
 ```bash
-# Code linting and formatting
+# 代码检查与格式化
 pnpm lint
 
-# Unit tests
+# 运行单元测试
 pnpm test
 ```
 
-</details>
+## 技术栈
 
-<details>
-<summary>Commit Guidelines</summary>
+### 前端框架与库
 
-<br>
+- **Vue 3.5.22**：渐进式 JavaScript 框架
+- **Vue Router 4.5.1**：Vue.js 官方路由管理器
+- **Pinia 3.0.3**：Vue 的状态管理库
+- **Element Plus 2.11.4**：基于 Vue 3 的组件库
+- **Axios 1.12.2**：HTTP 请求客户端
 
-`feat` New feature
+### 构建工具
 
-`fix` Bug fix
+- **Vite 7.1.9**：下一代前端构建工具
+- **TypeScript 5.9.3**：JavaScript 的超集
+- **Sass 1.78.0**：CSS 预处理器
+- **UnoCSS 66.5.3**：高性能原子 CSS 引擎
 
-`perf` Performance improvement
+### 开发工具
 
-`refactor` Code refactoring
+- **ESLint 9.37.0**：代码质量检查工具
+- **Vitest 3.2.4**：单元测试框架
+- **Vue Test Utils 2.4.6**：Vue.js 官方测试工具
 
-`docs` Documentation and comments
+## 项目结构
 
-`types` Type-related changes
+```
+src/
+├── App.vue                 # 应用入口组件
+├── main.ts                 # 应用入口文件
+├── common/                 # 公共资源和工具
+│   ├── apis/               # API 请求
+│   ├── assets/             # 静态资源
+│   ├── components/         # 公共组件
+│   ├── composables/        # 组合式函数
+│   ├── constants/          # 常量定义
+│   └── utils/              # 工具函数
+├── layouts/                # 布局组件
+├── pages/                  # 页面组件
+│   ├── dashboard/          # 仪表盘
+│   ├── login/              # 登录页面
+│   ├── error/              # 错误页面
+│   └── ...                 # 其他页面
+├── router/                 # 路由配置
+├── pinia/                  # 状态管理
+└── plugins/                # 插件配置
+```
 
-`test` Unit tests related
+## 环境配置
 
-`ci` Continuous integration, workflows
+项目支持多环境配置，相关环境文件位于项目根目录：
 
-`revert` Revert changes
+- `.env`：基础环境变量
+- `.env.development`：开发环境变量
+- `.env.staging`：测试环境变量
+- `.env.production`：生产环境变量
 
-`chore` Chores (update dependencies, modify configurations, etc)
+## 提交规范
 
-</details>
+遵循以下提交信息规范：
 
-## Links
-
-**Online Preview**: [github-pages](https://un-pany.github.io/v3-admin-vite)
-
-**Chinese Documentation**: [link](https://juejin.cn/post/7445151895121543209)
-
-**Zero to Hero Tutorial**: [link](https://juejin.cn/column/7207659644487139387)
-
-**Mobile Web App**: [mobvue](https://github.com/un-pany/mobvue)
-
-**Electron Desktop Version**: [v3-electron-vite](https://github.com/un-pany/v3-electron-vite)
-
-**Chinese Repository**: [gitee](https://gitee.com/un-pany/v3-admin-vite)
-
-**Optional Group**: [check how to join](https://github.com/un-pany/v3-admin-vite/issues/191)
-
-**Donations**: [buy a coffee for the author](https://github.com/un-pany/v3-admin-vite/issues/69)
-
-**Releases & Changelog**: [releases](https://github.com/un-pany/v3-admin-vite/releases)
-
-## Features
-
-**Simplified structure**: No complex encapsulation, no complicated type gymnastics, just enough to meet the needs
-
-**Detailed comments**: Every configuration item comes with as detailed comments as possible
-
-**Latest dependencies**: Keeps all third-party dependencies up to date
-
-**Consistency**: Unified code style, naming conventions, and comment style
-
-## Built-in Features
-
-**User Management**: Login, logout demonstration
-
-**Permission Management**: Page-level permissions (dynamic routing), button-level permissions (permission directives, permission functions), route guards
-
-**Multiple Environments**: Development, staging, and production environments
-
-**Multiple Themes**: Normal, dark, and deep blue themes
-
-**Multiple Layouts**: Left-side, top, and hybrid layouts
-
-**Homepage**: Different dashboard pages for different users
-
-**Error Pages**: 403, 404
-
-**Mobile Compatibility**: Layouts compatible with mobile screen resolutions
-
-**Others**: SVG sprite sheet, dynamic sidebar, dynamic breadcrumbs, tab navigation, content zoom and fullscreen, composable functions
-
-## Tech Stack
-
-**Vue3**: Vue3 + script setup with the latest Vue3 Composition API
-
-**Element Plus**: The Vue3 version of Element UI
-
-**Pinia**: The legendary Vuex5
-
-**Vite**: Really fast
-
-**Vue Router**: The routing system
-
-**TypeScript**: A superset of JavaScript
-
-**pnpm**: A faster, disk-space-saving package manager
-
-**Scss**: Consistent with Element Plus
-
-**CSS Variables**: Primarily controls layout and color in the project
-
-**ESLint**: Code linting and formatting
-
-**Axios**: Sends network requests
-
-**UnoCSS**: A high-performance, flexible atomic CSS engine
-
-## Project Preview Image
-
-![preview](./src/common/assets/images/docs/preview.png)
-
-## Contributors
-
-A big thank you to all the contributors!
-
-<a href="https://github.com/un-pany/v3-admin-vite/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=un-pany/v3-admin-vite">
-</a>
-
-## ‌WeChat Official Account‌
-
-New attempts, welcome to follow
-
-<a href="https://mp.weixin.qq.com/s/artNHKubYNRBlsrxD7eXXA">
-  <img src="https://github.com/user-attachments/assets/529bac73-f9e3-4311-94d0-3db57216b771">
-</a>
-
-## License
-
-[MIT](./LICENSE) License © 2022-PRESENT [pany](https://github.com/pany-ang)
+- `feat`：新功能
+- `fix`：修复 bug
+- `perf`：性能优化
+- `refactor`：代码重构
+- `docs`：文档更新
+- `types`：类型定义修改
+- `test`：测试相关
+- `ci`：持续集成相关
+- `revert`：回滚更改
+- `chore`：其他维护任务
