@@ -10,6 +10,12 @@ function logout() {
   location.reload()
 }
 
+enum ResponseCode {
+  SUCCESS = 200, // 成功
+  SERVER_ERROR = 500, // 服务器错误（如验证码失效）
+  UNAUTHORIZED = 401 // Token 过期/未授权
+}
+
 /** 创建请求实例 */
 function createInstance() {
   // 创建一个 axios 实例命名为 instance
@@ -32,14 +38,20 @@ function createInstance() {
       // 这个 code 是和后端约定的业务 code
       const code = apiData.code
       // 如果没有 code, 代表这不是项目后端开发的 api
+      // 3. 非系统接口判断（无 code 字段）
+      // const { code, message = "接口请求失败" } = apiData as ApiResponseData<any>
       if (code === undefined) {
-        ElMessage.error("非本系统的接口")
-        return Promise.reject(new Error("非本系统的接口"))
+        ElMessage.error("非本系统接口，禁止访问")
+        return Promise.reject(new Error("非本系统接口"))
       }
       switch (code) {
-        case 200:
+        case ResponseCode.SUCCESS:
+        // 成功：直接返回响应数据（供业务层使用）
           return apiData
-        case 401:
+        case ResponseCode.SERVER_ERROR:
+        // 业务错误（如验证码失效、参数错误）：提示错误信息，返回 reject
+          return apiData
+        case ResponseCode.UNAUTHORIZED:
           // Token 过期时
           return logout()
         default:

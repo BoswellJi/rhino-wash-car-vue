@@ -1,12 +1,15 @@
 <script lang="ts" setup>
 import type { FormRules } from "element-plus"
+
 import type { LoginRequestData } from "./apis/index"
 import ThemeSwitch from "@@/components/ThemeSwitch/index.vue"
 import { Key, Loading, Lock, Picture, User } from "@element-plus/icons-vue"
+import { setPassword, setUsername } from "@/common/utils/cache/cookies"
 import { useSettingsStore } from "@/pinia/stores/settings"
 import { useUserStore } from "@/pinia/stores/user"
 import { getCaptchaApi, loginApi } from "./apis"
 import Owl from "./components/Owl.vue"
+
 import { useFocus } from "./composables/useFocus"
 
 const route = useRoute()
@@ -28,39 +31,64 @@ const loading = ref(false)
 /** 验证码图片 URL */
 const codeUrl = ref("")
 
+/** 获取uuid */
+const getuuid = ref("")
+
 /** 登录表单数据 */
 const loginFormData: LoginRequestData = reactive({
-  username: "admin",
-  password: "12345678",
-  code: ""
+  username: "",
+  password: "",
+  code: "",
+  uuid: "",
+  rememberMe: false
 })
 
 /** 登录表单校验规则 */
 const loginFormRules: FormRules = {
-  username: [
-    { required: true, message: "请输入用户名", trigger: "blur" }
-  ],
+  username: [{ required: true, message: "请输入用户名", trigger: "blur" }],
   password: [
     { required: true, message: "请输入密码", trigger: "blur" },
     { min: 8, max: 16, message: "长度在 8 到 16 个字符", trigger: "blur" }
   ],
-  code: [
-    { required: true, message: "请输入验证码", trigger: "blur" }
-  ]
+  code: [{ required: true, message: "请输入验证码", trigger: "blur" }]
 }
 
 /** 登录 */
 function handleLogin() {
-  loginFormRef.value?.validate((valid) => {
+  loginFormRef.value?.validate((valid: boolean) => {
     if (!valid) {
-      ElMessage.error("表单校验不通过")
+      // ElMessage.error("表单校验不通过")
       return
     }
     loading.value = true
-    loginApi(loginFormData).then(({ data }) => {
-      userStore.setToken(data.token)
+    if (loginFormData.rememberMe) {
+      setUsername(loginFormData.username)
+      setPassword(loginFormData.password)
+      // Cookies.set("password", encrypt(loginForm.value.password), { expires: 30 })
+      // Cookies.set("rememberMe", loginForm.value.rememberMe, { expires: 30 })
+    } else {
+      // 否则移除
+      // Cookies.remove("username")
+      // Cookies.remove("password")
+      // Cookies.remove("rememberMe")
+    }
+
+    loginApi(loginFormData).then((res) => {
+      if (res.code === 500) {
+        ElMessage.error(res.msg)
+        createCode()
+        return
+      }
+
+      userStore.setToken(res.token)
       router.push(route.query.redirect ? decodeURIComponent(route.query.redirect as string) : "/")
-    }).catch(() => {
+    }).catch((error) => {
+      console.log("2")
+      console.log(error)
+
+      const errorMsg = error.response?.msg || error.message || "登录失败，请重试"
+      ElMessage.error(errorMsg)
+
       createCode()
       loginFormData.password = ""
     }).finally(() => {
@@ -69,15 +97,28 @@ function handleLogin() {
   })
 }
 
+// 关键：监听 getuuid 变化，自动同步到 loginFormData.uuid
+watch(() => getuuid.value, // 监听 getuuid 的值变化
+  (newUuid) => {
+    loginFormData.uuid = newUuid // 实时同步到表单
+  }, { immediate: true } // 初始值也同步
+)
+
 /** 创建验证码 */
 function createCode() {
   // 清空已输入的验证码
   loginFormData.code = ""
   // 清空验证图片
   codeUrl.value = ""
+  getuuid.value = ""
   // 获取验证码图片
   getCaptchaApi().then((res) => {
-    codeUrl.value = `data:image/jpg;base64,${res.img}`
+    if (res.code !== 200) {
+      ElMessage.error("获取验证码失败")
+    } else {
+      codeUrl.value = `data:image/jpg;base64,${res.img}`
+      getuuid.value = res.uuid
+    }
   })
 }
 
@@ -145,6 +186,14 @@ createCode()
                 </el-image>
               </template>
             </el-input>
+          </el-form-item>
+          <el-form-item prop="uuid">
+            <el-input
+              v-model.trim="loginFormData.uuid"
+              placeholder="uuid"
+              type="hidden"
+              tabindex="2"
+            />
           </el-form-item>
           <el-button :loading="loading" type="primary" size="large" @click.prevent="handleLogin">
             登 录

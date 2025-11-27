@@ -14,3 +14,10 @@ export function setToken(token: string) {
 export function removeToken() {
   Cookies.remove(CacheKey.TOKEN)
 }
+
+export function setUsername(username: string) {
+  return Cookies.set("username", username, { expires: 30 })
+}
+export function setPassword(password: string) {
+  return Cookies.set("password", password, { expires: 30 })
+}
