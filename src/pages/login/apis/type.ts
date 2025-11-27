@@ -1,10 +1,12 @@
 export interface LoginRequestData {
-  /** admin 或 editor */
-  username: "admin" | "editor"
+  /** 用户名 */
+  username: string
   /** 密码 */
   password: string
   /** 验证码 */
   code: string
+  /** uuid */
+  uuid: string
 }
 
 export type CaptchaResponseData = ApiResponseData<string>

@@ -1590,6 +1590,87 @@
 |postName    |String| 否   | 岗位名称      |软件开发|
 |status      |int| 否   | 状态      |1|
 
+# 字典接口
+
+## 获取字典类型列表
+
+**接口名**：`/system/dict/type/list`
+
+**请求方式**： GET
+
+**接口描述**： 获取字典类型列表
+
+**请求参数**： Query Params
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| pageNum  | int | 是  | 页码  | 1    |
+| pageSize  | int | 是  | 每页记录条数  | 10    |
+| dictName  | string | 否 | 字典名称  | "用户性别"            |
+| dictType  | string | 否  | 字典类型  | “sys_user_sex”     |
+| status  | int | 否  | 字典状态  | 状态（1正常 0停用）     |
+| beginTime  | datetime | 否  | 开始时间  | “2025-01-01”     |
+| endTime  | datetime | 否  | 结束时间  | “2025-12-01”      |
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|total   | int | 总行数     | 4                              |
+|rows   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createBy| String |创建人   |超级管理员|
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;remark| String | 备注    | “用户性别”   |
+|&emsp;&emsp;dictId| int | 主键id     | 1    |
+|&emsp;&emsp;dictName| String |字典名称    |“用户性别”   |
+|&emsp;&emsp; dictType | String |字典类型     | sys_user_sex    |
+|&emsp;&emsp;status| int | 状态（1正常 0停用）     |1  |
+
+
+## 获取字典数据列表
+
+**接口名**：`/system/dict/data/list`
+
+**请求方式**： GET
+
+**接口描述**： 获取岗位列表
+
+**请求参数**： Query Params
+
+| 字段名      | 类型   | 必填 | 说明       | 示例值                 |
+| ----------- | ------ | ---- | ---------- | ---------------------- |
+| pageNum  | int | 是  | 页码  | 1    |
+| pageSize  | int | 是  | 每页记录条数  | 10    |
+| dictName  | string | 否 | 字典名称  | "用户性别"            |
+| dictType  | string | 否  | 字典类型  | “sys_user_sex”     |
+| status  | int | 否  | 字典状态  | 状态（1正常 0停用）     |
+| beginTime  | datetime | 否  | 开始时间  | “2025-01-01”     |
+| endTime  | datetime | 否  | 结束时间  | “2025-12-01”      |
+
+
+**响应参数**:
+
+| 字段名 | 类型   | 说明       | 示例值                            |
+| ------ | ------ | ---------- | -------------------------------- |
+|msg    | string | 响应值 | "操作成功"                        |
+|code   | string | 状态码     | 200                              |
+|total   | int | 总行数     | 4                              |
+|rows   | array| 列表行数     | [{}]                     |
+|&emsp;&emsp;createBy| String |创建人   |超级管理员|
+|&emsp;&emsp;createTime| date| 创建时间    |2025-11-06 21:25:57|
+|&emsp;&emsp;remark| String | 备注    | “性别男”   |
+|&emsp;&emsp;dictCode| int | 岗位id     | 1    |
+|&emsp;&emsp;dictSort| String | 岗位编码     |“ceo”   |
+|&emsp;&emsp; dictLabel | String |岗位名称     | 软件开发    |
+|&emsp;&emsp;dictValue| int | 排序     |1  |
+|&emsp;&emsp;dictType|  int |状态     |状态（1正常 0停用）|
+|&emsp;&emsp;cssClass| boolean|用户是否存在此岗位标识 默认不存在     |false|
+|&emsp;&emsp;listClass| boolean|用户是否存在此岗位标识 默认不存在     |false|
+|&emsp;&emsp;cssClass| boolean|用户是否存在此岗位标识 默认不存在     |false|
+|&emsp;&emsp;cssClass| boolean|用户是否存在此岗位标识 默认不存在     |false|
+
 
 
 

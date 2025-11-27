@@ -37,17 +37,12 @@ export default defineConfig(({ mode }) => {
       open: true,
       // 反向代理
       proxy: {
-        "/rhino-wash-api": {
-          target: "https://vavlepage.com",
+        "/api/v1": {
+          target: "https://apifoxmock.com/m1/2930465-2145633-default",
           // 是否为 WebSocket
           ws: false,
           // 是否允许跨域
-          changeOrigin: true,
-          // 路径重写
-          rewrite: (path) => {
-            console.log("path:", path)
-            return path
-          }
+          changeOrigin: true
         }
       },
       // 是否允许跨域
